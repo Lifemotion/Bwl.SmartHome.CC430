@@ -115,6 +115,7 @@ __interrupt void CC1101_ISR(void)
 				radio_incoming_pack(RxBuffer, RxBufferLength);
 			} else{
 				RF1AIE &= ~BIT9;    // Disable TX end-of-packet interrupt
+				radio_receive_on();
 				transmitting = 0;
 			}
 				__bic_SR_register_on_exit(LPM3_bits);
