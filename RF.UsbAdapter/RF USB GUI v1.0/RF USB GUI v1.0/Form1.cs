@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -58,7 +59,7 @@ namespace RF_USB_GUI_v1._0
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            string hexValues = bytes_to_send.Text;
+            string hexValues = desr_addr.Text +" "+ data_length.Text +" "+ bytes_to_send.Text;
             if (hexValues.Length < 1) return;
             string[] hexValuesSplit = hexValues.Split(' ');
             byte[] data = new byte[hexValuesSplit.Length + 1];
@@ -81,6 +82,8 @@ namespace RF_USB_GUI_v1._0
             _serial = new SerialPort(ports_list.SelectedItem.ToString(), 115200);
             _serial.Open();
             SetStatus("port is opened");
+            Thread proc = new Thread(SerialProcess);
+            proc.Start();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -93,6 +96,13 @@ namespace RF_USB_GUI_v1._0
             this.Invoke((MethodInvoker)delegate {
                 status.Text = st;
             });
+        }
+
+        private void bytes_to_send_TextChanged(object sender, EventArgs e)
+        {
+            int data_len = bytes_to_send.Text.Replace(" ", "").Length / 2;
+            byte[] buf = { (byte)data_len };
+            data_length.Text = BitConverter.ToString(buf).Replace("-", "");
         }
     }
 }

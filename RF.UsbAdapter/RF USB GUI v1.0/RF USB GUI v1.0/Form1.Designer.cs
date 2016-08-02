@@ -37,6 +37,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.status = new System.Windows.Forms.Label();
+            this.desr_addr = new System.Windows.Forms.TextBox();
+            this.data_length = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ports_list
@@ -59,14 +64,15 @@
             // 
             // bytes_to_send
             // 
-            this.bytes_to_send.Location = new System.Drawing.Point(13, 57);
+            this.bytes_to_send.Location = new System.Drawing.Point(107, 71);
             this.bytes_to_send.Name = "bytes_to_send";
-            this.bytes_to_send.Size = new System.Drawing.Size(585, 20);
+            this.bytes_to_send.Size = new System.Drawing.Size(491, 20);
             this.bytes_to_send.TabIndex = 2;
+            this.bytes_to_send.TextChanged += new System.EventHandler(this.bytes_to_send_TextChanged);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(13, 83);
+            this.button2.Location = new System.Drawing.Point(13, 97);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(585, 23);
             this.button2.TabIndex = 3;
@@ -76,11 +82,11 @@
             // 
             // incom_data
             // 
-            this.incom_data.Location = new System.Drawing.Point(13, 134);
+            this.incom_data.Location = new System.Drawing.Point(13, 141);
             this.incom_data.Multiline = true;
             this.incom_data.Name = "incom_data";
             this.incom_data.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.incom_data.Size = new System.Drawing.Size(585, 170);
+            this.incom_data.Size = new System.Drawing.Size(585, 163);
             this.incom_data.TabIndex = 4;
             // 
             // button3
@@ -112,11 +118,57 @@
             this.status.TabIndex = 7;
             this.status.Text = "status";
             // 
+            // desr_addr
+            // 
+            this.desr_addr.Location = new System.Drawing.Point(12, 71);
+            this.desr_addr.Name = "desr_addr";
+            this.desr_addr.Size = new System.Drawing.Size(42, 20);
+            this.desr_addr.TabIndex = 8;
+            // 
+            // data_length
+            // 
+            this.data_length.Location = new System.Drawing.Point(60, 71);
+            this.data_length.Name = "data_length";
+            this.data_length.Size = new System.Drawing.Size(40, 20);
+            this.data_length.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "addr";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(57, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "length";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(104, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "data";
+            // 
             // bScan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 345);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.data_length);
+            this.Controls.Add(this.desr_addr);
             this.Controls.Add(this.status);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
@@ -144,6 +196,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label status;
+        private System.Windows.Forms.TextBox desr_addr;
+        private System.Windows.Forms.TextBox data_length;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
