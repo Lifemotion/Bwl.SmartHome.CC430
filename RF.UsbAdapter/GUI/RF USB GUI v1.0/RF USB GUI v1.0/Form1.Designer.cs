@@ -30,7 +30,7 @@
         {
             this.ports_list = new System.Windows.Forms.ComboBox();
             this.bOpen = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bytes_to_send = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -54,12 +54,12 @@
             this.bOpen.Text = "open";
             this.bOpen.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // bytes_to_send
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(585, 20);
-            this.textBox1.TabIndex = 2;
+            this.bytes_to_send.Location = new System.Drawing.Point(13, 57);
+            this.bytes_to_send.Name = "bytes_to_send";
+            this.bytes_to_send.Size = new System.Drawing.Size(585, 20);
+            this.bytes_to_send.TabIndex = 2;
             // 
             // button2
             // 
@@ -69,6 +69,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "send";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox2
             // 
@@ -107,7 +108,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.bytes_to_send);
             this.Controls.Add(this.bOpen);
             this.Controls.Add(this.ports_list);
             this.Name = "bScan";
@@ -122,7 +123,7 @@
 
         private System.Windows.Forms.ComboBox ports_list;
         private System.Windows.Forms.Button bOpen;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox bytes_to_send;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button3;
