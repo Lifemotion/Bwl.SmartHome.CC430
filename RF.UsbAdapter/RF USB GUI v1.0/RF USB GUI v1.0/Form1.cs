@@ -23,6 +23,7 @@ namespace RF_USB_GUI_v1._0
         private void Form1_Load(object sender, EventArgs e)
         {
             String[] ports = SerialPort.GetPortNames();
+            status.Text = "";
             foreach(String port in ports)
             {
                 ports_list.Items.Add(port);
@@ -39,9 +40,26 @@ namespace RF_USB_GUI_v1._0
             }
         }
 
+        private void SerialProcess()
+        {
+            while (_serial.IsOpen)
+            {
+                while (_serial.BytesToRead == 0) ;
+                int d_len = _serial.ReadByte();
+                byte[] data = new byte[d_len];
+                while (_serial.BytesToRead < d_len) ;
+                _serial.Read(data, 0, d_len);
+                string hex = BitConverter.ToString(data).Replace("-", " ")+" | ";
+                this.Invoke((MethodInvoker)delegate {
+                    incom_data.Text = incom_data.Text + hex;
+                });
+                SetStatus("receive: ok");
+            }
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             string hexValues = bytes_to_send.Text;
+            if (hexValues.Length < 1) return;
             string[] hexValuesSplit = hexValues.Split(' ');
             byte[] data = new byte[hexValuesSplit.Length + 1];
             data[0] = (byte)hexValuesSplit.Length;
@@ -52,6 +70,29 @@ namespace RF_USB_GUI_v1._0
             {
                 _serial.Write(data, 0, data.Length);
             }
+            SetStatus("sending: ok");
+        }
+
+        private void bOpen_Click(object sender, EventArgs e)
+        {
+            if (ports_list.SelectedItem == null) return;
+            String port = ports_list.SelectedItem.ToString();
+            if (port.Length == 0) return;
+            _serial = new SerialPort(ports_list.SelectedItem.ToString(), 115200);
+            _serial.Open();
+            SetStatus("port is opened");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            incom_data.Text = "";
+        }
+
+        private void SetStatus(String st)
+        {
+            this.Invoke((MethodInvoker)delegate {
+                status.Text = st;
+            });
         }
     }
 }

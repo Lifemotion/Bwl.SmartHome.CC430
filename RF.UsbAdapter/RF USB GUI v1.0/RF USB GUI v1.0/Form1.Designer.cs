@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(bScan));
             this.ports_list = new System.Windows.Forms.ComboBox();
             this.bOpen = new System.Windows.Forms.Button();
             this.bytes_to_send = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.incom_data = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.status = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ports_list
@@ -53,6 +55,7 @@
             this.bOpen.TabIndex = 1;
             this.bOpen.Text = "open";
             this.bOpen.UseVisualStyleBackColor = true;
+            this.bOpen.Click += new System.EventHandler(this.bOpen_Click);
             // 
             // bytes_to_send
             // 
@@ -71,14 +74,14 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox2
+            // incom_data
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 134);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(585, 170);
-            this.textBox2.TabIndex = 4;
+            this.incom_data.Location = new System.Drawing.Point(13, 134);
+            this.incom_data.Multiline = true;
+            this.incom_data.Name = "incom_data";
+            this.incom_data.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.incom_data.Size = new System.Drawing.Size(585, 170);
+            this.incom_data.TabIndex = 4;
             // 
             // button3
             // 
@@ -88,6 +91,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "clear";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -99,18 +103,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // status
+            // 
+            this.status.AutoSize = true;
+            this.status.Location = new System.Drawing.Point(296, 18);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(35, 13);
+            this.status.TabIndex = 7;
+            this.status.Text = "status";
+            // 
             // bScan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 345);
+            this.Controls.Add(this.status);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.incom_data);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.bytes_to_send);
             this.Controls.Add(this.bOpen);
             this.Controls.Add(this.ports_list);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "bScan";
             this.Text = "Rf GUI";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -125,9 +140,10 @@
         private System.Windows.Forms.Button bOpen;
         private System.Windows.Forms.TextBox bytes_to_send;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox incom_data;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label status;
     }
 }
 
