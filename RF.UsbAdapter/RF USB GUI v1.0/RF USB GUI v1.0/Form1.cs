@@ -59,7 +59,7 @@ namespace RF_USB_GUI_v1._0
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            string hexValues = desr_addr.Text +" "+ data_length.Text +" "+ bytes_to_send.Text;
+            string hexValues = data_length.Text +" "+ desr_addr.Text + " "+ bytes_to_send.Text;
             if (hexValues.Length < 1) return;
             string[] hexValuesSplit = hexValues.Split(' ');
             byte[] data = new byte[hexValuesSplit.Length + 1];
