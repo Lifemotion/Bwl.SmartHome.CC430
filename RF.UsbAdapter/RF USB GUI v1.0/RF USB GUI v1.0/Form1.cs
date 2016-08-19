@@ -50,6 +50,11 @@ namespace RF_USB_GUI_v1._0
                 byte[] data = new byte[d_len];
                 while (_serial.BytesToRead < d_len) ;
                 _serial.Read(data, 0, d_len);
+                UInt16 rssi = (UInt16)data[data.Length - 2];
+                if (rssi >= 128)
+                    SetRSSI(((((UInt16)rssi - 256) / 2) - 72)+"dBm");
+                else
+                    SetRSSI((((UInt16)rssi / 2) - 72)+ "dBm");
                 string hex = BitConverter.ToString(data).Replace("-", " ")+" | ";
                 this.Invoke((MethodInvoker)delegate {
                     incom_data.Text = incom_data.Text + hex;
@@ -91,6 +96,12 @@ namespace RF_USB_GUI_v1._0
             incom_data.Text = "";
         }
 
+        private void SetRSSI(String st)
+        {
+            this.Invoke((MethodInvoker)delegate {
+                rssi_value.Text = st;
+            });
+        }
         private void SetStatus(String st)
         {
             this.Invoke((MethodInvoker)delegate {
