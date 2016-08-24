@@ -8,7 +8,7 @@ namespace Remote_GUI
     class RadioController
     {
         SerialPort _port = null;
-        Dictionary<string, Device> devices = new Dictionary<string, Device>();
+        public Dictionary<string, Device> devices = new Dictionary<string, Device>();
         public static Dictionary<string, byte[]> CmdQueue = new Dictionary<string, byte[]>();
 
         public RadioController(String port)
@@ -16,7 +16,7 @@ namespace Remote_GUI
             _port = new SerialPort(port, 19200);
             _port.Open();
             new Thread(SerialProcess).Start();
-            new Thread(DeviceCleaner).Start();
+            //new Thread(DeviceCleaner).Start();
         }
 
         public void SerialProcess()
