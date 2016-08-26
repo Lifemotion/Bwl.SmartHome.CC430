@@ -2,17 +2,21 @@
 using System.Threading;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using SmartHomeVK.DeviceWork;
 
 namespace SmartHomeVK
 {
     class MessageProcessor
     {
+        Dictionary<string, string> equal = new Dictionary<string, string>();
+
         String client_id = "3697615";
         String client_secret = "AlVXZFMUqyrnABp8ncuU";
-        String access_token = "";
+        static String access_token = "";
         private String login;
         private String password;
-
+        public static String current_user = "";
         public MessageProcessor(String login, String pass)
         {
             this.login = login;
@@ -55,7 +59,7 @@ namespace SmartHomeVK
             new FriendProcessor(access_token);
         }
 
-        public void SendMsg(String uid, String msg)
+        public static void SendMsg(String uid, String msg)
         {
             System.Net.WebRequest req = System.Net.WebRequest.Create("https://api.vk.com/method/messages.send?user_id="+uid+ "&message="+msg+"&access_token=" + access_token + "&v=5.53");
             System.Net.WebResponse resp = req.GetResponse();
@@ -106,9 +110,39 @@ namespace SmartHomeVK
 
         private void CmdExec(String user, String cmd)
         {
+            current_user = user;
             Console.WriteLine(user + ": " + cmd);
-            SendMsg(user, "Команда "+cmd.Split(' ')[0].ToLower()+" выполнена");
+            String[] args = cmd.ToLower().Split(' ');
+            switch (args[0])
+            {
+                case "назвать":
+                        equal.Add(args[2], args[1]);
+                    SendMsg(user, "Устройству \"" + args[1] + "\" присвоено имя \"" + args[2] + "\"");
+                    break;
+                case "включить":
+                    if (!equal.ContainsKey(args[1]))
+                    {
+                        SendMsg(user, "Устройство \"" + args[1] + "\" отсутствует");
+                    }else
+                    {
+                        Switch sw = (Switch)RadioController.devices[equal[args[1]]];
+                        sw.SwitchOn();
+                    }
+                    break;
+                case "выключить":
+                    if (!equal.ContainsKey(args[1]))
+                    {
+                        SendMsg(user, "Устройство \"" + args[1] + "\" отсутствует");
+                    }
+                    else
+                    {
+                        Switch sw = (Switch)RadioController.devices[equal[args[1]]];
+                        sw.SwitchOff();
+                    }
+                    break;
+            }
         }
+
         public String HttpReq(String url, String data)
         {
             try
@@ -120,7 +154,7 @@ namespace SmartHomeVK
                 string Out = sr.ReadToEnd();
                 sr.Close();
                 String token = Out.Split(',')[0].Split(':')[1].Replace("\"","");
-                this.access_token = token;
+                access_token = token;
                 return token;
             }catch(Exception e)
             {
