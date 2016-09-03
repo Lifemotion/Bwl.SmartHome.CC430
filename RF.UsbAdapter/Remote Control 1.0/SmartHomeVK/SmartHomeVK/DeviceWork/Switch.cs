@@ -4,7 +4,7 @@ namespace SmartHomeVK.DeviceWork
 {
     class Switch : Device
     {
-        private Boolean state = false;
+        public Boolean state = false;
 
         public Switch()
         {
@@ -32,6 +32,7 @@ namespace SmartHomeVK.DeviceWork
             byte[] msg = new byte[2];
             msg[0] = 0x01;
             msg[1] = 0x01;
+            state = true;
             RadioController.CmdQueue.Add(dev_id_hex, msg);
         }
 
@@ -40,6 +41,7 @@ namespace SmartHomeVK.DeviceWork
             byte[] msg = new byte[2];
             msg[0] = 0x01;
             msg[1] = 0x00;
+            state = false;
             RadioController.CmdQueue.Add(dev_id_hex, msg);
         }
     }

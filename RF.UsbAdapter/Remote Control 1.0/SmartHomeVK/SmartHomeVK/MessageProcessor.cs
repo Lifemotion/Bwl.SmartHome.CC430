@@ -16,7 +16,7 @@ namespace SmartHomeVK
         static String access_token = "";
         private String login;
         private String password;
-        public static String current_user = "";
+        public static String current_user = "19453327";
         public MessageProcessor(String login, String pass)
         {
             this.login = login;
@@ -112,6 +112,11 @@ namespace SmartHomeVK
         {
             current_user = user;
             Console.WriteLine(user + ": " + cmd);
+            if (user != "19453327")
+            {
+                SendMsg(user, "лол. лавочка прикрыта. я теперь чисто коляновские команды исполняю)) лол");
+                return;
+            }
             String[] args = cmd.ToLower().Split(' ');
             switch (args[0])
             {
@@ -125,8 +130,9 @@ namespace SmartHomeVK
                         SendMsg(user, "Устройство \"" + args[1] + "\" отсутствует");
                     }else
                     {
-                        Switch sw = (Switch)RadioController.devices[equal[args[1]]];
-                        sw.SwitchOn();
+                        Switch swb = (Switch)RadioController.devices[equal[args[1]]];
+                        swb.SwitchOn();
+                        SendMsg(user, user+", " + args[1] + " включен");
                     }
                     break;
                 case "выключить":
@@ -136,9 +142,15 @@ namespace SmartHomeVK
                     }
                     else
                     {
-                        Switch sw = (Switch)RadioController.devices[equal[args[1]]];
-                        sw.SwitchOff();
+                        Switch swa = (Switch)RadioController.devices[equal[args[1]]];
+                        swa.SwitchOff();
+                        SendMsg(user, user + ", " + args[1] + " выключен");
                     }
+                    break;
+                case "состояние":
+                    Switch sw = (Switch)RadioController.devices[equal[args[1]]];
+                    if(sw.state) SendMsg(user, args[1] + " включен"); else
+                        SendMsg(user, args[1] + " выключен");
                     break;
             }
         }

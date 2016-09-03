@@ -1,0 +1,59 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Bwl.Hardware.Serial
+</name>
+</assembly>
+<members>
+<member name="P:Bwl.Hardware.Serial.SerialDevice.IsConnected">
+ <summary>
+ Подключено ли сейчас устройство.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Bwl.Hardware.Serial.SerialDevice.DisconnectWithReason(Bwl.Hardware.Serial.DisconnectReason)">
+ <summary>
+ Закрыть порт.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Bwl.Hardware.Serial.SerialDevice.AutoConnect">
+ <summary>
+ Пытаться автоматически установить соединение с синхронизатором.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Bwl.Hardware.Serial.SerialDevice.WriteWaitAnswer(System.Byte[],System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Отправить байты устройству и ждать ответ, который и возвращается. 
+ Если ответ не получен за указанное время, возвращается пустой массив.
+ </summary>
+ <param name="command">Байты отправляемой команды.</param>
+ <param name="endMessageSymbol">Символ конца сообщения, -1, если не используется.</param>
+ <param name="messageLength">Длина сообщения, -1, если не используется.</param>
+ <returns>Массив байт ответа устройства.</returns>
+ <remarks></remarks>
+</member>
+<member name="T:Bwl.Hardware.Serial.My.Resources.Resources">
+<summary>
+  Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+</summary>
+</member>
+<member name="P:Bwl.Hardware.Serial.My.Resources.Resources.ResourceManager">
+<summary>
+  Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+</summary>
+</member>
+<member name="P:Bwl.Hardware.Serial.My.Resources.Resources.Culture">
+<summary>
+  Перезаписывает свойство CurrentUICulture текущего потока для всех
+  обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+</summary>
+</member>
+</members>
+</doc>

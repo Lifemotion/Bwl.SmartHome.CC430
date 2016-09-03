@@ -1,0 +1,81 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Bwl.Hardware.SimplSerial
+</name>
+</assembly>
+<members>
+<member name="T:Bwl.Hardware.SimplSerial.My.Resources.Resources">
+<summary>
+  Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+</summary>
+</member>
+<member name="P:Bwl.Hardware.SimplSerial.My.Resources.Resources.ResourceManager">
+<summary>
+  Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+</summary>
+</member>
+<member name="P:Bwl.Hardware.SimplSerial.My.Resources.Resources.Culture">
+<summary>
+  Перезаписывает свойство CurrentUICulture текущего потока для всех
+  обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+</summary>
+</member>
+<member name="T:Bwl.Hardware.SimplSerial.Logger">
+ <summary>
+ Класс, представляющий средство для иерархичного ведения журнала событий в программе.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Bwl.Hardware.SimplSerial.Logger.#ctor">
+ <summary>
+ Новый корневой журнал.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Bwl.Hardware.SimplSerial.SimplSerialBus">
+ <summary>
+ Реализация базового интерфейса шины SimplSerial.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Bwl.Hardware.SimplSerial.SimplSerialBus.SerialDevice">
+ <summary>
+ Устройство последовательной связи.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Bwl.Hardware.SimplSerial.SimplSerialBus.Request(System.UInt16,System.Byte,System.Byte[])">
+ <summary>
+ Выполнить запрос и получить ответ. 
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Bwl.Hardware.SimplSerial.SimplSerialBus.Request(Bwl.Hardware.SimplSerial.SSRequest)">
+ <summary>
+ Выполнить запрос и получить ответ. 
+ </summary>
+ <param name="requestPacket">Пакет данных запроса</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Bwl.Hardware.SimplSerial.SimplSerialBus.RequestTestDevice(System.Int32,System.Byte[])">
+ <summary>
+ Самотестирование устройства на произвольных данных (не менее 1 байта и не более буфера устройства).
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Bwl.Hardware.SimplSerial.SimplSerialBus.RequestDeviceInfo(System.Int32)">
+ <summary>
+ Запросить базовую информацию устройства (команда 120).
+ </summary>
+ <param name="address">Адрес устройства.</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>
