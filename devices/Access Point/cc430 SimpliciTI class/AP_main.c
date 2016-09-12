@@ -1,4 +1,6 @@
 #include <string.h>
+#include <stdbool.h>
+
 #include "bsp.h"
 #include "mrfi.h"
 #include "bsp_leds.h"
@@ -7,8 +9,8 @@
 #include "nwk_api.h"
 #include "nwk_frame.h"
 #include "nwk.h"
+#include "nv_obj.h"
 
-#include "app_remap_led.h"
 
 static linkID_t sLID[NUM_CONNECTIONS] = {0};
 static uint8_t  sNumCurrentPeers = 0;
@@ -21,23 +23,36 @@ static volatile uint8_t sPeerFrameSem = 0;
 static volatile uint8_t sJoinSem = 0;
 static volatile uint8_t sBlinky = 0;
 
-#ifdef FREQUENCY_AGILITY
-#define INTERFERNCE_THRESHOLD_DBM (-70)
-#define SSIZE    25
-#define IN_A_ROW  3
-static int8_t  sSample[SSIZE];
-#endif  /* FREQUENCY_AGILITY */
-
-
 #define SPIN_ABOUT_A_QUARTER_SECOND   NWK_DELAY(250)
 
 void main (void)
 {
+  P1OUT ^= BIT0;
+  void *nwk_cfg_flash;
+  ioctlNVObj_t nwk_cfg_ram;
+  uint8_t *data = NULL;
+  
   bspIState_t intState;
-  memset(sSample, 0x0, sizeof(sSample));
   BSP_Init();
   uart_init();
   SMPL_Init(sCB);
+  
+  nwk_cfg_flash = nv_obj_read_nwk_cfg();
+  //восстанавливаем линки
+  if(nwk_cfg_flash != NULL)
+  {
+  	int i = 0;
+  	nwk_cfg_ram.objPtr = &data;
+    if(SMPL_Ioctl(IOCTL_OBJ_NVOBJ, IOCTL_ACT_GET, &nwk_cfg_ram) == SMPL_SUCCESS)
+    {
+      memcpy(data, nwk_cfg_flash, nwk_cfg_ram.objLen);
+    }
+    sNumCurrentPeers = (uint8_t)nv_obj_read_lnk_id(0);
+    for(i=0;i<sNumCurrentPeers;i++){
+    	sLID[i] = nv_obj_read_lnk_id(i+1);
+    }
+  }
+  
   while (1)
   {
     if (sJoinSem && (sNumCurrentPeers < NUM_CONNECTIONS)){
@@ -46,8 +61,16 @@ void main (void)
           break;
         }
       }
-      sNumCurrentPeers++;
       BSP_ENTER_CRITICAL_SECTION(intState);
+      nwk_cfg_ram.objPtr = &data;
+      if(SMPL_Ioctl(IOCTL_OBJ_NVOBJ, IOCTL_ACT_GET, &nwk_cfg_ram) == SMPL_SUCCESS){
+           if(nv_obj_write_nwk_cfg(data,nwk_cfg_ram.objLen) != true){
+             __no_operation(); // for debugging
+           }
+         }
+      sNumCurrentPeers++;
+      nv_obj_write_lnk_id(0, sNumCurrentPeers);
+      nv_obj_write_lnk_id(sNumCurrentPeers, sLID[sNumCurrentPeers-1]);
       sJoinSem--;
       BSP_EXIT_CRITICAL_SECTION(intState);
     }
@@ -59,7 +82,6 @@ void main (void)
         if (SMPL_SUCCESS == SMPL_Receive(sLID[i], msg, &len))
         {
           processMessage(sLID[i], msg, len);
-
           BSP_ENTER_CRITICAL_SECTION(intState);
           sPeerFrameSem--;
           BSP_EXIT_CRITICAL_SECTION(intState);
@@ -126,7 +148,8 @@ void uart_write_array(uint8_t *data, uint8_t num){
 
 
 uint8_t uart_read_byte(){
-	 while (!(UCA0IFG&UCRXIFG));             // USCI_A0 TX buffer ready?
+	 int i = 0;
+	 while (!(UCA0IFG&UCRXIFG) && i<65000)i++;             // USCI_A0 TX buffer ready?
    	 return UCA0RXBUF;	
 }
 
@@ -140,6 +163,7 @@ static uint8_t sCB(linkID_t lid)
   {
     sPeerFrameSem++;
   } else {
+  	P1OUT ^= BIT0;
     sJoinSem++;
   }
   return 0;
