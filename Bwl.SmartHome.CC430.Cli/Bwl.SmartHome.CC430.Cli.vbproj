@@ -49,18 +49,6 @@
     <Reference Include="Bwl.Framework">
       <HintPath>..\refs\bwl-smarthome-common\Bwl.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="Bwl.Hardware.Serial">
-      <HintPath>..\refs\bwl-simplserial\Bwl.Hardware.Serial.dll</HintPath>
-    </Reference>
-    <Reference Include="Bwl.Hardware.SimplSerial">
-      <HintPath>..\refs\bwl-simplserial\Bwl.Hardware.SimplSerial.dll</HintPath>
-    </Reference>
-    <Reference Include="bwl.Network.ClientServer">
-      <HintPath>..\refs\bwl-smarthome-common\bwl.Network.ClientServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Bwl.SmartHome.Common">
-      <HintPath>..\refs\bwl-smarthome-common\Bwl.SmartHome.Common.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -117,12 +105,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Bwl.SmartHome.CC430\Bwl.SmartHome.CC430.vbproj">
-      <Project>{f8d96bf4-ba01-4272-b7c9-688e1753e277}</Project>
-      <Name>Bwl.SmartHome.SimplSerial.AvrControl</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

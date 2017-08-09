@@ -67,7 +67,7 @@ Public Class DeviceManager
 
     Public Sub UpdateObjects(msg As Message)
         If Not Devices.ContainsKey(msg.Guid) Then
-            Dim marker = msg.Guid.Split(":")(0)
+            Dim marker = msg.Guid.Split("-")(0)
             If (marker.Equals("79")) Then
                 _logger.AddMessage("New device: leak sensor " + msg.Guid)
                 Devices.Add(msg.Guid, New CcLeakSensorDevice(_logger, msg.Guid, _shc))

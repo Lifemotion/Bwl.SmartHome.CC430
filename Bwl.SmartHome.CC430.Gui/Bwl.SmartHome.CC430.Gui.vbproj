@@ -49,17 +49,13 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bwl.Framework">
-      <HintPath>..\refs\bwl-smarthome-common\Bwl.Framework.dll</HintPath>
+    <Reference Include="Bwl.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bwl.SmartHome.Server\debug\bwl-smarthome-common\Bwl.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="Bwl.Hardware.Serial">
-      <HintPath>..\refs\bwl-simplserial\Bwl.Hardware.Serial.dll</HintPath>
-    </Reference>
-    <Reference Include="Bwl.Hardware.SimplSerial">
-      <HintPath>..\refs\bwl-simplserial\Bwl.Hardware.SimplSerial.dll</HintPath>
-    </Reference>
-    <Reference Include="Bwl.SmartHome.Common">
-      <HintPath>..\refs\bwl-smarthome-common\Bwl.SmartHome.Common.dll</HintPath>
+    <Reference Include="Bwl.SmartHome.Common, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bwl.SmartHome.Server\debug\bwl-smarthome-common\Bwl.SmartHome.Common.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
@@ -123,13 +119,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bwl.SmartHome.CC430\Bwl.SmartHome.CC430.vbproj">
-      <Project>{f8d96bf4-ba01-4272-b7c9-688e1753e277}</Project>
-      <Name>Bwl.SmartHome.SimplSerial.AvrControl</Name>
-    </ProjectReference>
+    <Content Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon.ico" />
+    <ProjectReference Include="..\Bwl.SmartHome.CC430\Bwl.SmartHome.CC430.vbproj">
+      <Project>{F8D96BF4-BA01-4272-B7C9-688E1753E277}</Project>
+      <Name>Bwl.SmartHome.CC430</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

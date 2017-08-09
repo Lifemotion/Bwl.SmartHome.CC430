@@ -8,8 +8,8 @@
     <OutputType>Library</OutputType>
     <StartupObject>
     </StartupObject>
-    <RootNamespace>Bwl.SmartHome.SimplSerial.AvrControl</RootNamespace>
-    <AssemblyName>Bwl.SmartHome.SimplSerial.AvrControl</AssemblyName>
+    <RootNamespace>Bwl.SmartHome.SimplSerial.CC430</RootNamespace>
+    <AssemblyName>Bwl.SmartHome.SimplSerial.CC430</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Bwl.SmartHome.SimplSerial.AvrControl.xml</DocumentationFile>
+    <DocumentationFile>Bwl.SmartHome.SimplSerial.CC430.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Bwl.SmartHome.SimplSerial.AvrControl.xml</DocumentationFile>
+    <DocumentationFile>Bwl.SmartHome.SimplSerial.CC430.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
@@ -52,17 +52,13 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bwl.Framework">
-      <HintPath>..\refs\bwl-smarthome-common\Bwl.Framework.dll</HintPath>
+    <Reference Include="Bwl.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bwl.SmartHome.Server\debug\bwl-smarthome-common\Bwl.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="Bwl.Hardware.Serial">
-      <HintPath>..\refs\bwl-simplserial\Bwl.Hardware.Serial.dll</HintPath>
-    </Reference>
-    <Reference Include="Bwl.Hardware.SimplSerial">
-      <HintPath>..\refs\bwl-simplserial\Bwl.Hardware.SimplSerial.dll</HintPath>
-    </Reference>
-    <Reference Include="Bwl.SmartHome.Common">
-      <HintPath>..\refs\bwl-smarthome-common\Bwl.SmartHome.Common.dll</HintPath>
+    <Reference Include="Bwl.SmartHome.Common, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bwl.SmartHome.Server\debug\bwl-smarthome-common\Bwl.SmartHome.Common.dll</HintPath>
     </Reference>
     <Reference Include="FTD2XX_NET">
       <HintPath>..\refs\FTD2XX_NET.dll</HintPath>
@@ -121,6 +117,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

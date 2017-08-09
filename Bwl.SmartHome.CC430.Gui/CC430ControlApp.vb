@@ -1,4 +1,4 @@
-﻿Imports Bwl.Framework
+﻿Imports Bwl.SmartHome.SimplSerial.CC430
 
 Public Class CC430ControlApp
     Inherits SmartHomeClientBase
