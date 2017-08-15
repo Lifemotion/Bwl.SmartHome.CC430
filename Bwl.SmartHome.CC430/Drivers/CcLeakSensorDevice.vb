@@ -2,20 +2,23 @@
     Inherits CcBaseDevice
     Private _leakDetected As Boolean = False
     Private _leakAction As New SmartStateScheme
+    Private _batteryState As New SmartStateScheme
     Private _normalLevel As UInt16 = 0
     Private _workState = "online"
-    Private ReadOnly _messagePeriod As TimeSpan = TimeSpan.FromSeconds(60)
+    Private ReadOnly _messagePeriod As TimeSpan = TimeSpan.FromSeconds(800)
     Public Sub New(logger As Framework.Logger, guid As String, shc As SmartHomeClient)
         MyBase.New(logger, guid, shc)
         _leakAction.ID = "leak"
         _leakAction.Type = SmartStateType.stateYesNo
         _leakAction.DefaultCaption = "Протечка"
+
         _objectScheme.ClassID = "SsValveDriver"
         _objectScheme.DefaultCaption = "Датчик утечки " + guid
         _objectScheme.DefaultCategory = SmartObjectCategory.generic
         _objectScheme.DefaultGroups = {"Датчики"}
         _objectScheme.DefaultShortName = ""
         _objectScheme.States.Add(_leakAction)
+        _objectScheme.States.Add(_batteryState)
         AddHandler _shc.SmartHome.Objects.StateChanged, AddressOf StateChangedHandler
         AddHandler _shc.SendObjectsSchemesTimer, AddressOf SendObjectsTimerHandler
     End Sub
@@ -42,12 +45,11 @@
 
     Public Overrides Sub MessageProcessor(msg As Message)
         _lastSuccessRequest = Now
-        Dim adc = msg.Data(0) * 256 + msg.Data(1)
         _logger.AddMessage("MSG: " + msg.RSSI.ToString + "dB")
-        If _normalLevel = 0 Then _normalLevel = adc
-        Dim state = _normalLevel - adc > 1000
+        Dim state = msg.Data(0) = 0
         Try
             _shc.SmartHome.Objects.SetValue(_guid, _leakAction.ID, If(state, "yes", "no"), ChangedBy.device)
+            _shc.SmartHome.Objects.SetValue(_guid, _batteryState.ID, ((msg.Data(1) * 256 + msg.Data(2)) * 0.01).ToString + "V", ChangedBy.device)
             If (_leakDetected <> state) Then
                 _shc.SmartHome.Objects.SetScheme(_guid, _objectScheme)
                 SendObjectsTimerHandler()

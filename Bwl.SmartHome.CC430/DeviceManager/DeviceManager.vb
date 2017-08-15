@@ -59,6 +59,7 @@ Public Class DeviceManager
                         _port.PortName = (FTDIFunctions.DetectFtdiSystemPortName(port))
                         _port.BaudRate = 19200
                         _port.Open()
+                        _logger.AddMessage(port.Description)
                     End If
                 Next
             End If
