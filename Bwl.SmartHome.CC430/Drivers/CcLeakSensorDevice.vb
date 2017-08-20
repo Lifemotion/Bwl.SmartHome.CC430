@@ -11,7 +11,6 @@
         _leakAction.ID = "leak"
         _leakAction.Type = SmartStateType.stateYesNo
         _leakAction.DefaultCaption = "Протечка"
-
         _objectScheme.ClassID = "SsValveDriver"
         _objectScheme.DefaultCaption = "Датчик утечки " + guid
         _objectScheme.DefaultCategory = SmartObjectCategory.generic
@@ -49,7 +48,6 @@
         Dim state = msg.Data(0) = 0
         Try
             _shc.SmartHome.Objects.SetValue(_guid, _leakAction.ID, If(state, "yes", "no"), ChangedBy.device)
-            _shc.SmartHome.Objects.SetValue(_guid, _batteryState.ID, ((msg.Data(1) * 256 + msg.Data(2)) * 0.01).ToString + "V", ChangedBy.device)
             If (_leakDetected <> state) Then
                 _shc.SmartHome.Objects.SetScheme(_guid, _objectScheme)
                 SendObjectsTimerHandler()
