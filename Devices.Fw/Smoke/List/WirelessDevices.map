@@ -1,0 +1,2807 @@
+################################################################################
+#                                                                              #
+#      IAR Universal Linker V6.3.4.78                                          #
+#                                                                              #
+#           Link time     =  31/Jul/2017  10:09:29                             #
+#           Target CPU    =  MSP430                                            #
+#           List file     =  D:\work\Other\CC430Devices\Devices.Fw\Smoke\List\ #
+#                            WirelessDevices.map                               #
+#           Output file 1 =  D:\work\Other\CC430Devices\Devices.Fw\Smoke\Exe\W #
+#                            irelessDevices.d43                                #
+#                            Format: ubrof10                                   #
+#                            UBROF version 10.0.6                              #
+#                            Using library modules for C-SPY (-rt)             #
+#           Command line  =  D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\b #
+#                            sp.r43                                            #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\d #
+#                            evice_radio_hal.r43                               #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\m #
+#                            rfi.r43                                           #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            v_obj.r43                                         #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            wk.r43                                            #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            wk_api.r43                                        #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            wk_frame.r43                                      #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            wk_freq.r43                                       #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            wk_globals.r43                                    #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            wk_ioctl.r43                                      #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            wk_join.r43                                       #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            wk_link.r43                                       #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            wk_mgmt.r43                                       #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            wk_ping.r43                                       #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            wk_pll.r43                                        #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            wk_QMgmt.r43                                      #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\n #
+#                            wk_security.r43                                   #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\s #
+#                            k_uart.r43                                        #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\S #
+#                            moke.r43                                          #
+#                            -o                                                #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\Exe\W #
+#                            irelessDevices.d43                                #
+#                            -l                                                #
+#                            D:\work\Other\CC430Devices\Devices.Fw\Smoke\List\ #
+#                            WirelessDevices.map                               #
+#                            -xms                                              #
+#                            "-IC:\Program Files (x86)\IAR Systems\Embedded Wo #
+#                            rkbench 7.3\430\LIB\"                             #
+#                            -f                                                #
+#                            "C:\Program Files (x86)\IAR Systems\Embedded Work #
+#                            bench 7.3\430\config\linker\lnkcc430f5137.xcl"    #
+#                            (-cmsp430 -D?CPU30_OFFSET=2 -QCODE_I=CODE_ID      #
+#                            -QTLS16_I=TLS16_ID -D__iar_HWMUL=4C0              #
+#                            -Z(CONST)INFO=1800-19FF                           #
+#                            -Z(CONST)INFOA=1980-19FF                          #
+#                            -Z(CONST)INFOB=1900-197F                          #
+#                            -Z(CONST)INFOC=1880-18FF                          #
+#                            -Z(CONST)INFOD=1800-187F                          #
+#                            -Z(DATA)DATA16_I,DATA16_Z,DATA16_N,TLS16_I=1C00-2 #
+#                            BFD                                               #
+#                            -Z(DATA)DATA16_HEAP+_DATA16_HEAP_SIZE             #
+#                            -Z(DATA)CODE_I                                    #
+#                            -Z(DATA)DATA20_I,DATA20_Z,DATA20_N,DATA20_HEAP+_D #
+#                            ATA20_HEAP_SIZE                                   #
+#                            -Z(DATA)CSTACK+_STACK_SIZE#                       #
+#                            -Z(CONST)DATA16_C,DATA16_ID,TLS16_ID,DIFUNCT,CHEC #
+#                            KSUM=8000-FF7F                                    #
+#                            -Z(CONST)DATA20_C,DATA20_ID                       #
+#                            -Z(CODE)CSTART,ISR_CODE,CODE_ID=8000-FF7F         #
+#                            -P(CODE)CODE,CODE16=8000-FF7F                     #
+#                            -Z(CODE)INTVEC=FF80-FFFF                          #
+#                            -Z(CODE)RESET=FFFE-FFFF) -f                       #
+#                            "C:\Program Files (x86)\IAR Systems\Embedded Work #
+#                            bench 7.3\430\config\linker\multiplier32.xcl"     #
+#                            (-e?Mul8Hw=?Mul8 -e?Mul16Hw=?Mul16                #
+#                            -e?Mul16to32uHw=?Mul16to32u                       #
+#                            -e?Mul16to32sHw=?Mul16to32s -e?Mul32Hw32=?Mul32   #
+#                            -e?Mul64Hw32=_Mul64i                              #
+#                            -e?Mul32u32uto64iHw32=_Mul32u32uto64i             #
+#                            -e?Mul32fHw32=_Mul32f                             #
+#                            -e_Mul64fHw32Ptr=_Mul64fPtr) -D_STACK_SIZE=50     #
+#                            -rt                                               #
+#                            "C:\Program Files (x86)\IAR Systems\Embedded Work #
+#                            bench 7.3\430\lib\dlib\dl430xlsfn.r43"            #
+#                            -e_PrintfLarge=_Printf -e_ScanfLarge=_Scanf       #
+#                            -D_DATA16_HEAP_SIZE=50 -s __program_start         #
+#                            -D_DATA20_HEAP_SIZE=50                            #
+#                                                                              #
+#                           Copyright (C) 1987-2015 IAR Systems AB.            #
+################################################################################
+
+
+
+
+
+                ****************************************
+                *                                      *
+                *           CROSS REFERENCE            *
+                *                                      *
+                ****************************************
+
+       Program entry at :           809A  Relocatable, from module : ?cstart
+
+
+
+
+                ****************************************
+                *                                      *
+                *            RUNTIME MODEL             *
+                *                                      *
+                ****************************************
+
+  __Heap_Handler             = Basic
+  __SystemLibrary            = DLib
+  __code_model               = large
+  __core                     = 430X
+  __data_model               = small
+  __dlib_file_descriptor     = 0
+  __dlib_full_locale_support = 0
+  __double_size              = 32
+  __pic                      = no
+  __reg_r4                   = free
+  __reg_r5                   = free
+  __rt_version               = 3
+
+                ****************************************
+                *                                      *
+                *    AUTOMATIC SYMBOL REDIRECTIONS     *
+                *                                      *
+                ****************************************
+
+                  There are no automatic symbol redirections.
+
+
+
+                ****************************************
+                *                                      *
+                *              MODULE MAP              *
+                *                                      *
+                ****************************************
+
+
+  DEFINED ABSOLUTE ENTRIES
+    *************************************************************************
+
+  DEFINED ABSOLUTE ENTRIES
+  PROGRAM MODULE, NAME : ?ABS_ENTRY_MOD
+
+Absolute parts
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _DATA20_HEAP_SIZE       0050 
+           _DATA16_HEAP_SIZE       0050 
+           _STACK_SIZE             0050 
+           __iar_HWMUL             04C0            MRFI_Init (mrfi)
+           ?CPU30_OFFSET           0002 
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\bsp.r43
+  PROGRAM MODULE, NAME : bsp
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_AN
+  Relative segment, address: 0202 - 0203 (0x2 bytes), align: 0
+  Segment part 1. ROOT        Intra module refs:   BSP_InitButtons
+                                                   BSP_InitLeds
+                                                   main (Smoke)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_PAOUT_L              0202 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           PAOUT                   0202 
+           PAOUT_H                 0203 
+           PAOUT_L                 0202 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0204 - 0205 (0x2 bytes), align: 0
+  Segment part 2. ROOT        Intra module refs:   BSP_InitLeds
+                                                   gpio_init (Smoke)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_PADIR_L              0204 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           PADIR                   0204 
+           PADIR_H                 0205 
+           PADIR_L                 0204 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0206 - 0207 (0x2 bytes), align: 0
+  Segment part 3. ROOT        Intra module refs:   BSP_InitButtons
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_PAREN_L              0206 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           PAREN                   0206 
+           PAREN_H                 0207 
+           PAREN_L                 0206 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0222 - 0223 (0x2 bytes), align: 0
+  Segment part 4. ROOT        Intra module refs:   BSP_InitLeds
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_PBOUT_L              0222 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           PBOUT                   0222 
+           PBOUT_H                 0223 
+           PBOUT_L                 0222 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0224 - 0225 (0x2 bytes), align: 0
+  Segment part 5. ROOT        Intra module refs:   BSP_InitLeds
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_PBDIR_L              0224 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           PBDIR                   0224 
+           PBDIR_H                 0225 
+           PBDIR_L                 0224 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0120 - 0121 (0x2 bytes), align: 0
+  Segment part 6. ROOT        Intra module refs:   SetVCore
+                                                   SetVCoreDown
+                                                   SetVCoreUp
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_PMMCTL0_L            0120 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           PMMCTL0                 0120 
+           PMMCTL0_H               0121 
+           PMMCTL0_L               0120 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0124 - 0125 (0x2 bytes), align: 0
+  Segment part 7. ROOT        Intra module refs:   SetVCoreUp
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_SVSMHCTL_L           0124 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           SVSMHCTL                0124 
+           SVSMHCTL_H              0125 
+           SVSMHCTL_L              0124 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0126 - 0127 (0x2 bytes), align: 0
+  Segment part 8. ROOT        Intra module refs:   SetVCoreDown
+                                                   SetVCoreUp
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_SVSMLCTL_L           0126 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           SVSMLCTL                0126 
+           SVSMLCTL_H              0127 
+           SVSMLCTL_L              0126 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 012C - 012D (0x2 bytes), align: 0
+  Segment part 9. ROOT        Intra module refs:   SetVCoreDown
+                                                   SetVCoreUp
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_PMMIFG_L             012C 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           PMMIFG                  012C 
+           PMMIFG_H                012D 
+           PMMIFG_L                012C 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0102 - 0103 (0x2 bytes), align: 0
+  Segment part 10. ROOT       Intra module refs:   Bsp_SetClocks
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_SFRIFG1_L            0102 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           SFRIFG1                 0102 
+           SFRIFG1_H               0103 
+           SFRIFG1_L               0102 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0340 - 0341 (0x2 bytes), align: 0
+  Segment part 11. ROOT       Intra module refs:   BSP_Delay
+                                                   BSP_InitBoard
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           TA0CTL                  0340 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0342 - 0343 (0x2 bytes), align: 0
+  Segment part 12. ROOT       Intra module refs:   BSP_Delay
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           TA0CCTL0                0342 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0350 - 0351 (0x2 bytes), align: 0
+  Segment part 13. ROOT       Intra module refs:   BSP_Delay
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           TA0R                    0350 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0352 - 0353 (0x2 bytes), align: 0
+  Segment part 14. ROOT       Intra module refs:   BSP_Delay
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           TA0CCR0                 0352 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0160 - 0161 (0x2 bytes), align: 0
+  Segment part 15. ROOT       Intra module refs:   Bsp_SetClocks
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_UCSCTL0_L            0160 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           UCSCTL0                 0160 
+           UCSCTL0_H               0161 
+           UCSCTL0_L               0160 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0162 - 0163 (0x2 bytes), align: 0
+  Segment part 16. ROOT       Intra module refs:   Bsp_SetClocks
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_UCSCTL1_L            0162 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           UCSCTL1                 0162 
+           UCSCTL1_H               0163 
+           UCSCTL1_L               0162 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0164 - 0165 (0x2 bytes), align: 0
+  Segment part 17. ROOT       Intra module refs:   Bsp_SetClocks
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_UCSCTL2_L            0164 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           UCSCTL2                 0164 
+           UCSCTL2_H               0165 
+           UCSCTL2_L               0164 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0166 - 0167 (0x2 bytes), align: 0
+  Segment part 18. ROOT       Intra module refs:   Bsp_SetClocks
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_UCSCTL3_L            0166 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           UCSCTL3                 0166 
+           UCSCTL3_H               0167 
+           UCSCTL3_L               0166 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0168 - 0169 (0x2 bytes), align: 0
+  Segment part 19. ROOT       Intra module refs:   Bsp_SetClocks
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_UCSCTL4_L            0168 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           UCSCTL4                 0168 
+           UCSCTL4_H               0169 
+           UCSCTL4_L               0168 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 016E - 016F (0x2 bytes), align: 0
+  Segment part 20. ROOT       Intra module refs:   Bsp_SetClocks
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_UCSCTL7_L            016E 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           UCSCTL7                 016E 
+           UCSCTL7_H               016F 
+           UCSCTL7_L               016E 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 015C - 015D (0x2 bytes), align: 0
+  Segment part 21. ROOT       Intra module refs:   __low_level_init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_WDTCTL_L             015C 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           WDTCTL                  015C 
+           WDTCTL_H                015D 
+           WDTCTL_L                015C 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A03E - A05D (0x20 bytes), align: 1
+  Segment part 27.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BSP_Init                A03E            main (Smoke)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9DB0 - 9DDB (0x2c bytes), align: 1
+  Segment part 30.            Intra module refs:   Bsp_SetVCore
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           SetVCore                9DB0 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 94EE - 9547 (0x5a bytes), align: 1
+  Segment part 29.            Intra module refs:   SetVCore
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           SetVCoreUp              94EE 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9E08 - 9E31 (0x2a bytes), align: 1
+  Segment part 28.            Intra module refs:   SetVCore
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           SetVCoreDown            9E08 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A312 - A319 (0x8 bytes), align: 1
+  Segment part 31.            Intra module refs:   __low_level_init
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           Bsp_SetVCore            A312 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 959C - 95E9 (0x4e bytes), align: 1
+  Segment part 32.            Intra module refs:   __low_level_init
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           Bsp_SetClocks           959C 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A22E - A23F (0x12 bytes), align: 1
+  Segment part 33. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __low_level_init        A22E            ?cstart_call_low_level_init (?cstart)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A294 - A2A3 (0x10 bytes), align: 1
+  Segment part 26.            Intra module refs:   BSP_Init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BSP_InitBoard           A294 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9AD8 - 9B0B (0x34 bytes), align: 1
+  Segment part 34.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BSP_Delay               9AD8            Mrfi_DelayUsec (mrfi)
+                                                   Mrfi_DelayUsecLong (mrfi)
+                                                   Mrfi_DelayUsecSem (mrfi)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A322 - A329 (0x8 bytes), align: 1
+  Segment part 25.            Intra module refs:   BSP_Init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BSP_InitDrivers         A322 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A1BA - A1CF (0x16 bytes), align: 1
+  Segment part 24.            Intra module refs:   BSP_InitDrivers
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BSP_InitLeds            A1BA 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A2B4 - A2C1 (0xe bytes), align: 1
+  Segment part 23.            Intra module refs:   BSP_InitDrivers
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BSP_InitButtons         A2B4 
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\device_radio_hal.r43
+  PROGRAM MODULE, NAME : device_radio_hal
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_AN
+  Relative segment, address: 0100 - 0101 (0x2 bytes), align: 0
+  Segment part 1. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_SFRIE1_L             0100 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           SFRIE1                  0100 
+           SFRIE1_H                0101 
+           SFRIE1_L                0100 
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\mrfi.r43
+  PROGRAM MODULE, NAME : mrfi
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_AN
+  Relative segment, address: 0F02 - 0F03 (0x2 bytes), align: 0
+  Segment part 1. ROOT        Intra module refs:   MRFI_Init
+                                                   mrfiRadioInterfaceCmdStrobe
+                                                   mrfiRadioInterfaceReadReg
+                                                   mrfiRadioInterfaceReadRxFifo
+                                                   mrfiRadioInterfaceWriteReg
+                                                   mrfiRadioInterfaceWriteTxFifo
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_RF1AIFCTL1_L         0F02 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           RF1AIFCTL1              0F02 
+           RF1AIFCTL1_H            0F03 
+           RF1AIFCTL1_L            0F02 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0F0C - 0F0D (0x2 bytes), align: 0
+  Segment part 2. ROOT        Intra module refs:   MRFI_RadioIsr
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_RF1AIFERRV_L         0F0C 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           RF1AIFERRV              0F0C 
+           RF1AIFERRV_H            0F0D 
+           RF1AIFERRV_L            0F0C 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0F0E - 0F0F (0x2 bytes), align: 0
+  Segment part 3. ROOT        Intra module refs:   MRFI_RadioIsr
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_RF1AIFIV_L           0F0E 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           RF1AIFIV                0F0E 
+           RF1AIFIV_H              0F0F 
+           RF1AIFIV_L              0F0E 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0F10 - 0F11 (0x2 bytes), align: 0
+  Segment part 4. ROOT        Intra module refs:   MRFI_Init
+                                                   mrfiRadioInterfaceCmdStrobe
+                                                   mrfiRadioInterfaceReadRxFifo
+                                                   mrfiRadioInterfaceWriteReg
+                                                   mrfiRadioInterfaceWriteTxFifo
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_RF1AINSTRW_L         0F10 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           RF1AINSTRW              0F10 
+           RF1AINSTRW_H            0F11 
+           RF1AINSTRW_L            0F10 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0F12 - 0F13 (0x2 bytes), align: 0
+  Segment part 5. ROOT        Intra module refs:   mrfiRadioInterfaceReadReg
+                                                   mrfiRadioInterfaceReadRxFifo
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_RF1AINSTR1W_L        0F12 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           RF1AINSTR1W             0F12 
+           RF1AINSTR1W_H           0F13 
+           RF1AINSTR1W_L           0F12 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0F20 - 0F21 (0x2 bytes), align: 0
+  Segment part 6. ROOT        Intra module refs:   MRFI_Init
+                                                   mrfiRadioInterfaceCmdStrobe
+                                                   mrfiRadioInterfaceReadRxFifo
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_RF1ASTAT0W_L         0F20 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           RF1ASTAT0W              0F20 
+           RF1ASTAT0W_H            0F21 
+           RF1ASTAT0W_L            0F20 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0F22 - 0F23 (0x2 bytes), align: 0
+  Segment part 7. ROOT        Intra module refs:   mrfiRadioInterfaceReadReg
+                                                   mrfiRadioInterfaceReadRxFifo
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_RF1ASTAT1W_L         0F22 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           RF1ASTAT1W              0F22 
+           RF1ASTAT1W_H            0F23 
+           RF1ASTAT1W_L            0F22 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0F30 - 0F31 (0x2 bytes), align: 0
+  Segment part 8. ROOT        Intra module refs:   MRFI_Init
+                                                   MRFI_Rssi
+                                                   MRFI_Transmit
+                                                   mrfiRadioInterfaceCmdStrobe
+                                                   mrfi_TxCCADone
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_RF1AIN_L             0F30 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           RF1AIN                  0F30 
+           RF1AIN_H                0F31 
+           RF1AIN_L                0F30 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0F32 - 0F33 (0x2 bytes), align: 0
+  Segment part 9. ROOT        Intra module refs:   MRFI_RadioIsr
+                                                   MRFI_Transmit
+                                                   Mrfi_RxModeOff
+                                                   Mrfi_RxModeOn
+                                                   mrfi_TxImmediateDone
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_RF1AIFG_L            0F32 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           RF1AIFG                 0F32 
+           RF1AIFG_H               0F33 
+           RF1AIFG_L               0F32 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0F34 - 0F35 (0x2 bytes), align: 0
+  Segment part 10. ROOT       Intra module refs:   MRFI_Init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_RF1AIES_L            0F34 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           RF1AIES                 0F34 
+           RF1AIES_H               0F35 
+           RF1AIES_L               0F34 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0F36 - 0F37 (0x2 bytes), align: 0
+  Segment part 11. ROOT       Intra module refs:   MRFI_RadioIsr
+                                                   Mrfi_RxModeOff
+                                                   Mrfi_RxModeOn
+                                                   Mrfi_SyncPinRxIsr
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_RF1AIE_L             0F36 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           RF1AIE                  0F36 
+           RF1AIE_H                0F37 
+           RF1AIE_L                0F36 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0F38 - 0F39 (0x2 bytes), align: 0
+  Segment part 12. ROOT       Intra module refs:   MRFI_RadioIsr
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_RF1AIV_L             0F38 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           RF1AIV                  0F38 
+           RF1AIV_H                0F39 
+           RF1AIV_L                0F38 
+    -------------------------------------------------------------------------
+DATA16_C
+  Relative segment, address: 8018 - 801B (0x4 bytes), align: 0
+  Segment part 15.            Intra module refs:   MRFI_EnableRxAddrFilter
+                                                   MRFI_SetRxAddrFilter
+                                                   Mrfi_RxAddrIsFiltered
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           mrfiBroadcastAddr       8018            nwk_getBCastAddress (nwk_globals)
+    -------------------------------------------------------------------------
+DATA16_C
+  Relative segment, address: 801C - 805B (0x40 bytes), align: 0
+  Segment part 16.            Intra module refs:   MRFI_Init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           mrfiRadioCfg            801C 
+    -------------------------------------------------------------------------
+DATA16_C
+  Relative segment, address: 805C - 805F (0x4 bytes), align: 0
+  Segment part 17.            Intra module refs:   MRFI_SetLogicalChannel
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           mrfiLogicalChanTable    805C 
+    -------------------------------------------------------------------------
+DATA16_C
+  Relative segment, address: 8060 - 8062 (0x3 bytes), align: 0
+  Segment part 18.            Intra module refs:   MRFI_SetRFPwr
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           mrfiRFPowerTable        8060 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C50 - 1C50 (0x1 bytes), align: 0
+  Segment part 19.            Intra module refs:   MRFI_GetRadioState
+                                                   MRFI_Init
+                                                   MRFI_Rssi
+                                                   MRFI_RxIdle
+                                                   MRFI_RxOn
+                                                   MRFI_SetLogicalChannel
+                                                   MRFI_Sleep
+                                                   MRFI_Transmit
+                                                   MRFI_WakeUp
+                                                   Mrfi_SyncPinRxIsr
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           mrfiRadioState          1C50 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C51 - 1C80 (0x30 bytes), align: 0
+  Segment part 20.            Intra module refs:   MRFI_Init
+                                                   MRFI_Receive
+                                                   Mrfi_SyncPinRxIsr
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           mrfiIncomingPacket      1C51 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C81 - 1C81 (0x1 bytes), align: 0
+  Segment part 21.            Intra module refs:   MRFI_Init
+                                                   MRFI_RandomByte
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           mrfiRndSeed             1C81 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C82 - 1C82 (0x1 bytes), align: 0
+  Segment part 22.            Intra module refs:   MRFI_PostKillSem
+                                                   MRFI_ReplyDelay
+                                                   Mrfi_DelayUsecSem
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sKillSem                1C82 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C83 - 1C83 (0x1 bytes), align: 0
+  Segment part 23.            Intra module refs:   MRFI_PostKillSem
+                                                   MRFI_ReplyDelay
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sReplyDelayContext      1C83 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C2E - 1C2F (0x2 bytes), align: 1
+  Segment part 24.            Intra module refs:   MRFI_Init
+                                                   MRFI_ReplyDelay
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sReplyDelayScalar       1C2E 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C30 - 1C31 (0x2 bytes), align: 1
+  Segment part 25.            Intra module refs:   MRFI_Init
+                                                   Mrfi_RandomBackoffDelay
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sBackoffHelper          1C30 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C84 - 1C84 (0x1 bytes), align: 0
+  Segment part 26.            Intra module refs:   MRFI_EnableRxAddrFilter
+                                                   Mrfi_RxAddrIsFiltered
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           mrfiRxFilterEnabled     1C84 
+    -------------------------------------------------------------------------
+DATA16_I
+  Relative segment, address: 1C00 - 1C03 (0x4 bytes), align: 0
+  Segment part 27.            Intra module refs:   MRFI_EnableRxAddrFilter
+                                                   MRFI_SetRxAddrFilter
+                                                   Mrfi_RxAddrIsFiltered
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           mrfiRxFilterAddr        1C00 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C32 - 1C35 (0x4 bytes), align: 1
+  Segment part 29.            Intra module refs:   Mrfi_SyncPinRxIsr
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           crcFail                 1C32 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C36 - 1C39 (0x4 bytes), align: 1
+  Segment part 30.            Intra module refs:   Mrfi_SyncPinRxIsr
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           crcPass                 1C36 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C3A - 1C3D (0x4 bytes), align: 1
+  Segment part 31.            Intra module refs:   Mrfi_SyncPinRxIsr
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           noFrame                 1C3A 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C85 - 1C85 (0x1 bytes), align: 0
+  Segment part 32.            Intra module refs:   MRFI_Init
+                                                   Mrfi_RxModeOff
+                                                   Mrfi_RxModeOn
+                                                   Mrfi_SyncPinRxIsr
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           rx_isr_context          1C85 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 8134 - 8337 (0x204 bytes), align: 1
+  Segment part 44.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_Init               8134            SMPL_Init (nwk_api)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A188 - A1A1 (0x1a bytes), align: 1
+  Segment part 46.            Intra module refs:   MRFI_Transmit
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           MRFI_PrepareToTx        A188 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A31A - A321 (0x8 bytes), align: 1
+  Segment part 47.            Intra module refs:   MRFI_Transmit
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           mrfi_TxCCADone          A31A 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A2E6 - A2F1 (0xc bytes), align: 1
+  Segment part 48.            Intra module refs:   MRFI_Transmit
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           mrfi_TxImmediateDone    A2E6 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 8BBA - 8CA1 (0xe8 bytes), align: 1
+  Segment part 51.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_Transmit           8BBA            nwk_sendAckReply (nwk_frame)
+                                                   nwk_sendFrame (nwk_frame)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A2C2 - A2CD (0xc bytes), align: 1
+  Segment part 52.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_Receive            A2C2            MRFI_RxCompleteISR (nwk_frame)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 8638 - 8769 (0x132 bytes), align: 1
+  Segment part 54.            Intra module refs:   MRFI_RadioIsr
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           Mrfi_SyncPinRxIsr       8638 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9F98 - 9FB9 (0x22 bytes), align: 1
+  Segment part 41.            Intra module refs:   MRFI_RxOn
+                                                   MRFI_SetLogicalChannel
+                                                   MRFI_Transmit
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           Mrfi_RxModeOn           9F98 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A01E - A03D (0x20 bytes), align: 1
+  Segment part 55.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_RxOn               A01E            SMPL_SendOpt (nwk_api)
+                                                   nwk_join (nwk_join)
+                                                   nwk_link (nwk_link)
+                                                   nwk_radioControl (nwk_ioctl)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 99C8 - 99FF (0x38 bytes), align: 1
+  Segment part 39.            Intra module refs:   MRFI_Init
+                                                   MRFI_RxIdle
+                                                   MRFI_SetLogicalChannel
+                                                   MRFI_Transmit
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           Mrfi_RxModeOff          99C8 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A0BE - A0DB (0x1e bytes), align: 1
+  Segment part 56.            Intra module refs:   MRFI_Sleep
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_RxIdle             A0BE            SMPL_SendOpt (nwk_api)
+                                                   nwk_join (nwk_join)
+                                                   nwk_link (nwk_link)
+                                                   nwk_radioControl (nwk_ioctl)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9F00 - 9F27 (0x28 bytes), align: 1
+  Segment part 57.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_Sleep              9F00            SMPL_SendOpt (nwk_api)
+                                                   nwk_join (nwk_join)
+                                                   nwk_link (nwk_link)
+                                                   nwk_radioControl (nwk_ioctl)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9FBA - 9FDB (0x22 bytes), align: 1
+  Segment part 58.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_WakeUp             9FBA            SMPL_Init (nwk_api)
+                                                   SMPL_SendOpt (nwk_api)
+                                                   nwk_join (nwk_join)
+                                                   nwk_link (nwk_link)
+                                                   nwk_radioControl (nwk_ioctl)
+               calls direct
+    -------------------------------------------------------------------------
+ISR_CODE
+  Relative segment, address: 80CA - 8131 (0x68 bytes), align: 1
+  Segment part 71.            Intra module refs:   MRFI_RadioIsr::??INTVEC 106
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_RadioIsr           80CA 
+               interrupt function
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A05E - A07D (0x20 bytes), align: 1
+  Segment part 60.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_Rssi               A05E            nwk_radioControl (nwk_ioctl)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9CCA - 9CF9 (0x30 bytes), align: 1
+  Segment part 59.            Intra module refs:   MRFI_Rssi
+                                                   Mrfi_SyncPinRxIsr
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           Mrfi_CalculateRssi      9CCA 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9EB0 - 9ED7 (0x28 bytes), align: 1
+  Segment part 61.            Intra module refs:   Mrfi_RandomBackoffDelay
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_RandomByte         9EB0            nwk_frameInit (nwk_frame)
+                                                   nwk_joinInit (nwk_join)
+                                                   nwk_linkInit (nwk_link)
+                                                   nwk_mgmtInit (nwk_mgmt)
+                                                   nwk_pingInit (nwk_ping)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9F74 - 9F97 (0x24 bytes), align: 1
+  Segment part 49.            Intra module refs:   MRFI_Transmit
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           Mrfi_RandomBackoffDelay
+                                   9F74 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9D28 - 9D55 (0x2e bytes), align: 1
+  Segment part 35.            Intra module refs:   MRFI_DelayMs
+                                                   MRFI_Transmit
+                                                   Mrfi_RandomBackoffDelay
+                                                   mrfiRadioInterfaceCmdStrobe
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           Mrfi_DelayUsec          9D28 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9B40 - 9B73 (0x34 bytes), align: 1
+  Segment part 62.            Intra module refs:   MRFI_ReplyDelay
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           Mrfi_DelayUsecSem       9B40 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 8F72 - 9009 (0x98 bytes), align: 1
+  Segment part 50.            Intra module refs:   MRFI_Transmit
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Mrfi_DelayUsecLong      8F72 
+               calls direct and indirect
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A1A2 - A1B9 (0x18 bytes), align: 1
+  Segment part 63.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_DelayMs            A1A2            linkTo (Smoke)
+                                                   main (Smoke)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9682 - 96C9 (0x48 bytes), align: 1
+  Segment part 64.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_ReplyDelay         9682            SMPL_SendOpt (nwk_api)
+                                                   nwk_join (nwk_join)
+                                                   nwk_link (nwk_link)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A2F2 - A2FD (0xc bytes), align: 1
+  Segment part 65.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_PostKillSem        A2F2            nwk_isConnectionValid (nwk)
+                                                   nwk_processJoin (nwk_join)
+                                                   nwk_processLink (nwk_link)
+                                                   nwk_processMgmt (nwk_mgmt)
+                                                   nwk_processPing (nwk_ping)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A336 - A33B (0x6 bytes), align: 1
+  Segment part 66.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_GetRadioState      A336            SMPL_SendOpt (nwk_api)
+                                                   nwk_join (nwk_join)
+                                                   nwk_link (nwk_link)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9C3A - 9C69 (0x30 bytes), align: 1
+  Segment part 42.            Intra module refs:   MRFI_Init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_SetLogicalChannel
+                                   9C3A 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A16E - A187 (0x1a bytes), align: 1
+  Segment part 40.            Intra module refs:   MRFI_Init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_SetRFPwr           A16E            nwk_radioControl (nwk_ioctl)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9BD8 - 9C09 (0x32 bytes), align: 1
+  Segment part 67.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_SetRxAddrFilter    9BD8            SMPL_Init (nwk_api)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A0DC - A0F9 (0x1e bytes), align: 1
+  Segment part 68.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_EnableRxAddrFilter
+                                   A0DC            SMPL_Init (nwk_api)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9712 - 9759 (0x48 bytes), align: 1
+  Segment part 70.            Intra module refs:   Mrfi_SyncPinRxIsr
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           Mrfi_RxAddrIsFiltered   9712 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A378 - A379 (0x2 bytes), align: 1
+  Segment part 43.            Intra module refs:   MRFI_Init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           mrfiRadioInterfaceInit
+                                   A378 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 90A0 - 9135 (0x96 bytes), align: 1
+  Segment part 38.            Intra module refs:   MRFI_Init
+                                                   MRFI_PrepareToTx
+                                                   MRFI_Sleep
+                                                   MRFI_Transmit
+                                                   MRFI_WakeUp
+                                                   Mrfi_RxModeOff
+                                                   Mrfi_RxModeOn
+                                                   Mrfi_SyncPinRxIsr
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           mrfiRadioInterfaceCmdStrobe
+                                   90A0 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 95EA - 9635 (0x4c bytes), align: 1
+  Segment part 37.            Intra module refs:   MRFI_Init
+                                                   MRFI_Rssi
+                                                   Mrfi_SyncPinRxIsr
+                                                   mrfiRadioInterfaceCmdStrobe
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           mrfiRadioInterfaceReadReg
+                                   95EA 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9954 - 998D (0x3a bytes), align: 1
+  Segment part 36.            Intra module refs:   MRFI_EnableRxAddrFilter
+                                                   MRFI_Init
+                                                   MRFI_SetLogicalChannel
+                                                   MRFI_SetRFPwr
+                                                   MRFI_SetRxAddrFilter
+                                                   mrfiRadioInterfaceCmdStrobe
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           mrfiRadioInterfaceWriteReg
+                                   9954 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 98DC - 9917 (0x3c bytes), align: 1
+  Segment part 45.            Intra module refs:   MRFI_PrepareToTx
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           mrfiRadioInterfaceWriteTxFifo
+                                   98DC 
+    -------------------------------------------------------------------------
+DATA16_I
+  Relative segment, address: 1C04 - 1C04 (0x1 bytes), align: 0
+  Segment part 33.            Intra module refs:   mrfiRadioInterfaceReadRxFifo
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           method                  1C04 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 93C0 - 9425 (0x66 bytes), align: 1
+  Segment part 53.            Intra module refs:   Mrfi_SyncPinRxIsr
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           mrfiRadioInterfaceReadRxFifo
+                                   93C0 
+    -------------------------------------------------------------------------
+INTVEC
+  Common segment, address: FF80 - FFEB (0x6c bytes), align: 1
+  Segment part 13. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_RadioIsr::??INTVEC 106
+                                   FFEA 
+    -------------------------------------------------------------------------
+DATA16_ID
+  Relative segment, address: 806C - 806F (0x4 bytes), align: 0
+  Segment part 28.            Intra module refs:   mrfiRxFilterAddr
+    -------------------------------------------------------------------------
+DATA16_ID
+  Relative segment, address: 8070 - 8070 (0x1 bytes), align: 0
+  Segment part 34.            Intra module refs:   method
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nv_obj.r43
+  PROGRAM MODULE, NAME : nv_obj
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_AN
+  Relative segment, address: 0140 - 0141 (0x2 bytes), align: 0
+  Segment part 1. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_FCTL1_L              0140 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           FCTL1                   0140 
+           FCTL1_H                 0141 
+           FCTL1_L                 0140 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 0144 - 0145 (0x2 bytes), align: 0
+  Segment part 2. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_FCTL3_L              0144 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           FCTL3                   0144 
+           FCTL3_H                 0145 
+           FCTL3_L                 0144 
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nwk.r43
+  PROGRAM MODULE, NAME : nwk
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_I
+  Relative segment, address: 1C05 - 1C2D (0x29 bytes), align: 0
+  Segment part 2.             Intra module refs:   initializeConnection
+                                                   map_lid2idx
+                                                   nwk_allocateLocalRxPort
+                                                   nwk_findPeer
+                                                   nwk_getConnInfo
+                                                   nwk_getNextConnection
+                                                   nwk_isConnectionValid
+                                                   nwk_isLinkDuplicate
+                                                   nwk_nwkInit
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sPersistInfo            1C05 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 91C2 - 924D (0x8c bytes), align: 1
+  Segment part 4.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_nwkInit             91C2            SMPL_Init (nwk_api)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9636 - 9681 (0x4c bytes), align: 1
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_getNextConnection   9636            nwk_link (nwk_link)
+                                                   smpl_send_link_reply (nwk_link)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 98A0 - 98DB (0x3c bytes), align: 1
+  Segment part 6.             Intra module refs:   nwk_getNextConnection
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           initializeConnection    98A0 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A32A - A32F (0x6 bytes), align: 1
+  Segment part 8.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_freeConnection      A32A            nwk_connectionControl (nwk_ioctl)
+                                                   nwk_link (nwk_link)
+                                                   smpl_send_link_reply (nwk_link)
+                                                   smpl_send_unlink_reply (nwk_link)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9A6E - 9AA3 (0x36 bytes), align: 1
+  Segment part 10.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_getConnInfo         9A6E            SMPL_Receive (nwk_api)
+                                                   SMPL_SendOpt (nwk_api)
+                                                   nwk_QfindOldest (nwk_QMgmt)
+                                                   nwk_connectionControl (nwk_ioctl)
+                                                   nwk_radioControl (nwk_ioctl)
+                                                   nwk_retrieveFrame (nwk_frame)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9824 - 9863 (0x40 bytes), align: 1
+  Segment part 11.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_isLinkDuplicate     9824            smpl_send_link_reply (nwk_link)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9E86 - 9EAF (0x2a bytes), align: 1
+  Segment part 13.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_checkConnInfo       9E86            SMPL_Receive (nwk_api)
+                                                   SMPL_SendOpt (nwk_api)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9136 - 91C1 (0x8c bytes), align: 1
+  Segment part 14.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_isConnectionValid   9136            dispatchFrame (nwk_frame)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 8CA2 - 8D77 (0xd6 bytes), align: 1
+  Segment part 15.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_allocateLocalRxPort
+                                   8CA2            nwk_link (nwk_link)
+                                                   smpl_send_link_reply (nwk_link)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9918 - 9953 (0x3c bytes), align: 1
+  Segment part 16.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_isValidReply        9918            nwk_processJoin (nwk_join)
+                                                   nwk_processLink (nwk_link)
+                                                   nwk_processMgmt (nwk_mgmt)
+                                                   nwk_processPing (nwk_ping)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9DDC - 9E07 (0x2c bytes), align: 1
+  Segment part 9.             Intra module refs:   initializeConnection
+                                                   nwk_getConnInfo
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           map_lid2idx             9DDC 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 97E2 - 9823 (0x42 bytes), align: 1
+  Segment part 17.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_findPeer            97E2            smpl_send_unlink_reply (nwk_link)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9D56 - 9D83 (0x2e bytes), align: 1
+  Segment part 19.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_getNumObjectFromMsg
+                                   9D56            smpl_send_link_reply (nwk_link)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 998E - 99C7 (0x3a bytes), align: 1
+  Segment part 20.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_putNumObjectIntoMsg
+                                   998E            nwk_join (nwk_join)
+                                                   nwk_link (nwk_link)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A354 - A357 (0x4 bytes), align: 1
+  Segment part 21.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_NVObj               A354            SMPL_Ioctl (nwk_api)
+    -------------------------------------------------------------------------
+DATA16_ID
+  Relative segment, address: 8071 - 8099 (0x29 bytes), align: 0
+  Segment part 3.             Intra module refs:   sPersistInfo
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nwk_api.r43
+  PROGRAM MODULE, NAME : nwk_api
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_Z
+  Relative segment, address: 1C86 - 1C86 (0x1 bytes), align: 0
+  Segment part 2.             Intra module refs:   SMPL_Init
+                                                   SMPL_Ioctl
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sInit_done              1C86 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9A00 - 9A37 (0x38 bytes), align: 1
+  Segment part 3.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           SMPL_Init               9A00            main (Smoke)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 89C4 - 8AC3 (0x100 bytes), align: 1
+  Segment part 5.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           SMPL_SendOpt            89C4            linkTo (Smoke)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 96CA - 9711 (0x48 bytes), align: 1
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           SMPL_Receive            96CA            RxCallBack (Smoke)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A35C - A35F (0x4 bytes), align: 1
+  Segment part 8.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           SMPL_Link               A35C            linkTo (Smoke)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 889A - 89C3 (0x12a bytes), align: 1
+  Segment part 12.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           SMPL_Ioctl              889A            nwk_join (nwk_join)
+                                                   nwk_link (nwk_link)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A1D0 - A1E3 (0x14 bytes), align: 1
+  Segment part 13.            Intra module refs:   SMPL_Ioctl
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ioctlPreInitAccessIsOK
+                                   A1D0 
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nwk_frame.r43
+  PROGRAM MODULE, NAME : nwk_frame
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_C
+  Relative segment, address: 8000 - 8017 (0x18 bytes), align: 1
+  Segment part 2.             Intra module refs:   dispatchFrame
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           func                    8000 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C87 - 1C87 (0x1 bytes), align: 0
+  Segment part 3.             Intra module refs:   nwk_buildFrame
+                                                   nwk_frameInit
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sTRACTID                1C87 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C3E - 1C3F (0x2 bytes), align: 1
+  Segment part 4.             Intra module refs:   dispatchFrame
+                                                   nwk_buildFrame
+                                                   nwk_frameInit
+                                                   nwk_sendAckReply
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sMyAddr                 1C3E 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C88 - 1C88 (0x1 bytes), align: 0
+  Segment part 5.             Intra module refs:   nwk_buildFrame
+                                                   nwk_getMyRxType
+                                                   nwk_sendAckReply
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sMyRxType               1C88 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C89 - 1C89 (0x1 bytes), align: 0
+  Segment part 6.             Intra module refs:   nwk_frameInit
+                                                   nwk_sendAckReply
+                                                   nwk_sendFrame
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sMyTxType               1C89 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C40 - 1C43 (0x4 bytes), align: 1
+  Segment part 7.             Intra module refs:   dispatchFrame
+                                                   nwk_frameInit
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           spCallback              1C40 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9FDC - 9FFD (0x22 bytes), align: 1
+  Segment part 8.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_frameInit           9FDC            nwk_nwkInit (nwk)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 900A - 909F (0x96 bytes), align: 1
+  Segment part 9.             Intra module refs:   nwk_buildAckReqFrame
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_buildFrame          900A            SMPL_SendOpt (nwk_api)
+                                                   nwk_rawSend (nwk_ioctl)
+                                                   smpl_send_link_reply (nwk_link)
+                                                   smpl_send_ping_reply (nwk_ping)
+                                                   smpl_send_unlink_reply (nwk_link)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A09E - A0BD (0x20 bytes), align: 1
+  Segment part 10.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_buildAckReqFrame    A09E            SMPL_SendOpt (nwk_api)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9FFE - A01D (0x20 bytes), align: 1
+  Segment part 12.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MRFI_RxCompleteISR      9FFE            Mrfi_SyncPinRxIsr (mrfi)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 8E2C - 8ED3 (0xa8 bytes), align: 1
+  Segment part 13.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_retrieveFrame       8E2C            SMPL_Receive (nwk_api)
+                                                   nwk_rawReceive (nwk_ioctl)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 8D78 - 8E2B (0xb4 bytes), align: 1
+  Segment part 11.            Intra module refs:   MRFI_RxCompleteISR
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           dispatchFrame           8D78 
+               calls direct and indirect
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9D84 - 9DAF (0x2c bytes), align: 1
+  Segment part 14.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_sendFrame           9D84            SMPL_SendOpt (nwk_api)
+                                                   nwk_rawSend (nwk_ioctl)
+                                                   smpl_send_link_reply (nwk_link)
+                                                   smpl_send_ping_reply (nwk_ping)
+                                                   smpl_send_unlink_reply (nwk_link)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A348 - A34D (0x6 bytes), align: 1
+  Segment part 15.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_getMyRxType         A348            nwk_link (nwk_link)
+                                                   smpl_send_link_reply (nwk_link)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 924E - 92D7 (0x8a bytes), align: 1
+  Segment part 16.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_sendAckReply        924E            nwk_isConnectionValid (nwk)
+               calls direct
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nwk_freq.r43
+  PROGRAM MODULE, NAME : nwk_freq
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A380 - A381 (0x2 bytes), align: 1
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_freqInit            A380            nwk_nwkInit (nwk)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A36C - A36F (0x4 bytes), align: 1
+  Segment part 3.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_processFreq         A36C            func (nwk_frame)
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nwk_globals.r43
+  PROGRAM MODULE, NAME : nwk_globals
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_C
+  Relative segment, address: 8063 - 8066 (0x4 bytes), align: 0
+  Segment part 2.             Intra module refs:   nwk_getMyAddress
+                                                   nwk_globalsInit
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sMyROMAddress           8063 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C8A - 1C8D (0x4 bytes), align: 0
+  Segment part 3.             Intra module refs:   nwk_globalsInit
+                                                   nwk_setAPAddress
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sAPAddress              1C8A 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C8E - 1C91 (0x4 bytes), align: 0
+  Segment part 4.             Intra module refs:   nwk_getMyAddress
+                                                   nwk_globalsInit
+                                                   nwk_setMyAddress
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sMyRAMAddress           1C8E 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C92 - 1C92 (0x1 bytes), align: 0
+  Segment part 5.             Intra module refs:   nwk_getMyAddress
+                                                   nwk_globalsInit
+                                                   nwk_setMyAddress
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sRAMAddressIsSet        1C92 
+    -------------------------------------------------------------------------
+DATA16_C
+  Relative segment, address: 8067 - 806B (0x5 bytes), align: 0
+  Segment part 6.             Intra module refs:   nwk_getFWVersion
+                                                   nwk_getProtocolVersion
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sVersionInfo            8067 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9F28 - 9F4D (0x26 bytes), align: 1
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_globalsInit         9F28            nwk_nwkInit (nwk)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A1F8 - A209 (0x12 bytes), align: 1
+  Segment part 8.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_getMyAddress        A1F8            SMPL_Init (nwk_api)
+                                                   nwk_deviceAddress (nwk_ioctl)
+                                                   nwk_frameInit (nwk_frame)
+                                                   nwk_isValidReply (nwk)
+                                                   nwk_processMgmt (nwk_mgmt)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A34E - A353 (0x6 bytes), align: 1
+  Segment part 9.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_getFWVersion        A34E            SMPL_Ioctl (nwk_api)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A342 - A347 (0x6 bytes), align: 1
+  Segment part 10.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_getProtocolVersion
+                                   A342            SMPL_Ioctl (nwk_api)
+                                                   nwk_join (nwk_join)
+                                                   nwk_link (nwk_link)
+                                                   smpl_send_link_reply (nwk_link)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A118 - A135 (0x1e bytes), align: 1
+  Segment part 11.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_setMyAddress        A118            nwk_deviceAddress (nwk_ioctl)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A2CE - A2D9 (0xc bytes), align: 1
+  Segment part 12.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_setAPAddress        A2CE            nwk_join (nwk_join)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A33C - A341 (0x6 bytes), align: 1
+  Segment part 14.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_getBCastAddress     A33C            nwk_join (nwk_join)
+                                                   nwk_link (nwk_link)
+                                                   nwk_nwkInit (nwk)
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nwk_ioctl.r43
+  PROGRAM MODULE, NAME : nwk_ioctl
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: 9548 - 959B (0x54 bytes), align: 1
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_rawSend             9548            SMPL_Ioctl (nwk_api)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9CFA - 9D27 (0x2e bytes), align: 1
+  Segment part 3.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_rawReceive          9CFA            SMPL_Ioctl (nwk_api)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 8ED4 - 8F71 (0x9e bytes), align: 1
+  Segment part 4.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_radioControl        8ED4            SMPL_Ioctl (nwk_api)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9BA6 - 9BD7 (0x32 bytes), align: 1
+  Segment part 5.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_deviceAddress       9BA6            SMPL_Ioctl (nwk_api)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9F4E - 9F73 (0x26 bytes), align: 1
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_connectionControl   9F4E            SMPL_Ioctl (nwk_api)
+               calls direct
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nwk_join.r43
+  PROGRAM MODULE, NAME : nwk_join
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_Z
+  Relative segment, address: 1C44 - 1C47 (0x4 bytes), align: 1
+  Segment part 2.             Intra module refs:   nwk_getJoinToken
+                                                   nwk_join
+                                                   nwk_joinInit
+                                                   nwk_setJoinToken
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sJoinToken              1C44 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C48 - 1C4B (0x4 bytes), align: 1
+  Segment part 3.             Intra module refs:   nwk_joinInit
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           spCallback              1C48 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C93 - 1C93 (0x1 bytes), align: 0
+  Segment part 4.             Intra module refs:   nwk_join
+                                                   nwk_joinInit
+                                                   nwk_processJoin
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sTid                    1C93 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9E5C - 9E85 (0x2a bytes), align: 1
+  Segment part 5.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_joinInit            9E5C            nwk_nwkInit (nwk)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A284 - A293 (0x10 bytes), align: 1
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_setJoinToken        A284            SMPL_Ioctl (nwk_api)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A240 - A251 (0x12 bytes), align: 1
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_getJoinToken        A240            SMPL_Ioctl (nwk_api)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 8AC4 - 8BB9 (0xf6 bytes), align: 1
+  Segment part 8.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_join                8AC4            SMPL_Init (nwk_api)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A07E - A09D (0x20 bytes), align: 1
+  Segment part 9.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_processJoin         A07E            func (nwk_frame)
+               calls direct
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nwk_link.r43
+  PROGRAM MODULE, NAME : nwk_link
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_Z
+  Relative segment, address: 1C4C - 1C4F (0x4 bytes), align: 1
+  Segment part 2.             Intra module refs:   nwk_getLinkToken
+                                                   nwk_link
+                                                   nwk_linkInit
+                                                   nwk_setLinkToken
+                                                   smpl_send_link_reply
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sLinkToken              1C4C 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C94 - 1C94 (0x1 bytes), align: 0
+  Segment part 3.             Intra module refs:   smpl_send_link_reply
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sListenActive           1C94 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C95 - 1C96 (0x2 bytes), align: 0
+  Segment part 4.             Intra module refs:   nwk_linkInit
+                                                   smpl_send_link_reply
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sServiceLinkID          1C95 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C97 - 1C97 (0x1 bytes), align: 0
+  Segment part 5.             Intra module refs:   smpl_send_link_reply
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sNumLinkers             1C97 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C98 - 1C98 (0x1 bytes), align: 0
+  Segment part 6.             Intra module refs:   nwk_link
+                                                   nwk_linkInit
+                                                   nwk_processLink
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sTid                    1C98 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9C9A - 9CC9 (0x30 bytes), align: 1
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_linkInit            9C9A            nwk_nwkInit (nwk)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A2A4 - A2B3 (0x10 bytes), align: 1
+  Segment part 8.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_setLinkToken        A2A4            SMPL_Ioctl (nwk_api)
+                                                   nwk_join (nwk_join)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A21C - A22D (0x12 bytes), align: 1
+  Segment part 9.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_getLinkToken        A21C            SMPL_Ioctl (nwk_api)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 84D6 - 8637 (0x162 bytes), align: 1
+  Segment part 11.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_link                84D6            SMPL_Link (nwk_api)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9356 - 93BF (0x6a bytes), align: 1
+  Segment part 12.            Intra module refs:   handleLinkRequest
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           smpl_send_unlink_reply
+                                   9356 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 8338 - 84D5 (0x19e bytes), align: 1
+  Segment part 13.            Intra module refs:   handleLinkRequest
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           smpl_send_link_reply    8338 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9ED8 - 9EFF (0x28 bytes), align: 1
+  Segment part 15.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_processLink         9ED8            func (nwk_frame)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9B74 - 9BA5 (0x32 bytes), align: 1
+  Segment part 14.            Intra module refs:   nwk_processLink
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           handleLinkRequest       9B74 
+               calls direct
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nwk_mgmt.r43
+  PROGRAM MODULE, NAME : nwk_mgmt
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_Z
+  Relative segment, address: 1C99 - 1C99 (0x1 bytes), align: 0
+  Segment part 3.             Intra module refs:   nwk_mgmtInit
+                                                   nwk_processMgmt
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sTid                    1C99 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A2FE - A307 (0xa bytes), align: 1
+  Segment part 4.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_mgmtInit            A2FE            nwk_nwkInit (nwk)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 97A0 - 97E1 (0x42 bytes), align: 1
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_processMgmt         97A0            func (nwk_frame)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A37C - A37D (0x2 bytes), align: 1
+  Segment part 5.             Intra module refs:   nwk_processMgmt
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           smpl_send_mgmt_reply    A37C 
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nwk_ping.r43
+  PROGRAM MODULE, NAME : nwk_ping
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_Z
+  Relative segment, address: 1C9A - 1C9A (0x1 bytes), align: 0
+  Segment part 2.             Intra module refs:   nwk_pingInit
+                                                   nwk_processPing
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sTid                    1C9A 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A308 - A311 (0xa bytes), align: 1
+  Segment part 3.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_pingInit            A308            nwk_nwkInit (nwk)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 975A - 979F (0x46 bytes), align: 1
+  Segment part 5.             Intra module refs:   handlePingRequest
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           smpl_send_ping_reply    975A 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9E32 - 9E5B (0x2a bytes), align: 1
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_processPing         9E32            func (nwk_frame)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A2DA - A2E5 (0xc bytes), align: 1
+  Segment part 6.             Intra module refs:   nwk_processPing
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           handlePingRequest       A2DA 
+               calls direct
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nwk_pll.r43
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nwk_QMgmt.r43
+  PROGRAM MODULE, NAME : nwk_QMgmt
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_Z
+  Relative segment, address: 1C9B - 1CFE (0x64 bytes), align: 0
+  Segment part 2.             Intra module refs:   nwk_QInit
+                                                   nwk_QadjustOrder
+                                                   nwk_QfindOldest
+                                                   nwk_QfindSlot
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sInFrameQ               1C9B 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1CFF - 1D62 (0x64 bytes), align: 0
+  Segment part 3.             Intra module refs:   nwk_QInit
+                                                   nwk_QfindSlot
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sOutFrameQ              1CFF 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A152 - A16D (0x1c bytes), align: 1
+  Segment part 4.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_QInit               A152            nwk_nwkInit (nwk)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 92D8 - 9355 (0x7e bytes), align: 1
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_QfindSlot           92D8            MRFI_RxCompleteISR (nwk_frame)
+                                                   nwk_buildFrame (nwk_frame)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9864 - 989F (0x3c bytes), align: 1
+  Segment part 5.             Intra module refs:   nwk_QfindSlot
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_QadjustOrder        9864            nwk_retrieveFrame (nwk_frame)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 876A - 8899 (0x130 bytes), align: 1
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_QfindOldest         876A            nwk_retrieveFrame (nwk_frame)
+               calls direct
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\nwk_security.r43
+  PROGRAM MODULE, NAME : nwk_security
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A37A - A37B (0x2 bytes), align: 1
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_securityInit        A37A            nwk_nwkInit (nwk)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A370 - A373 (0x4 bytes), align: 1
+  Segment part 3.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           nwk_processSecurity     A370            func (nwk_frame)
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\sk_uart.r43
+  PROGRAM MODULE, NAME : sk_uart
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_AN
+  Relative segment, address: 020A - 020B (0x2 bytes), align: 0
+  Segment part 2. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_PASEL_L              020A 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           PASEL                   020A 
+           PASEL_H                 020B 
+           PASEL_L                 020A 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 01C0 - 01C1 (0x2 bytes), align: 0
+  Segment part 3. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_PMAPKEYID_L          01C0 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           PMAPKEYID               01C0 
+           PMAPKEYID_H             01C1 
+           PMAPKEYID_L             01C0 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 01CC - 01CD (0x2 bytes), align: 0
+  Segment part 4. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_P1MAP45_L            01CC 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           P1MAP45                 01CC 
+           P1MAP45_H               01CD 
+           P1MAP45_L               01CC 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 01CE - 01CF (0x2 bytes), align: 0
+  Segment part 5. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_P1MAP67_L            01CE 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           P1MAP67                 01CE 
+           P1MAP67_H               01CF 
+           P1MAP67_L               01CE 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 05C0 - 05C1 (0x2 bytes), align: 0
+  Segment part 6. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_UCA0CTLW0_L          05C0 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           UCA0CTLW0               05C0 
+           UCA0CTLW0_H             05C1 
+           UCA0CTLW0_L             05C0 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 05C6 - 05C7 (0x2 bytes), align: 0
+  Segment part 7. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_UCA0BRW_L            05C6 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           UCA0BRW                 05C6 
+           UCA0BRW_H               05C7 
+           UCA0BRW_L               05C6 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 05C8 - 05C8 (0x1 bytes), align: 0
+  Segment part 8. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           UCA0MCTL                05C8 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 05CC - 05CC (0x1 bytes), align: 0
+  Segment part 9. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           UCA0RXBUF               05CC 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 05CE - 05CE (0x1 bytes), align: 0
+  Segment part 10. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           UCA0TXBUF               05CE 
+    -------------------------------------------------------------------------
+DATA16_AN
+  Relative segment, address: 05DC - 05DD (0x2 bytes), align: 0
+  Segment part 11. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_UCA0ICTL_L           05DC 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           UCA0ICTL                05DC 
+           UCA0ICTL_H              05DD 
+           UCA0ICTL_L              05DC 
+
+    *************************************************************************
+
+  FILE NAME : D:\work\Other\CC430Devices\Devices.Fw\Smoke\Obj\Smoke.r43
+  PROGRAM MODULE, NAME : Smoke
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA16_Z
+  Relative segment, address: 1D63 - 1D63 (0x1 bytes), align: 0
+  Segment part 9.             Intra module refs:   RxCallBack
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           radio_cmd               1D63 
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1D64 - 1D64 (0x1 bytes), align: 0
+  Segment part 11.            Intra module refs:   RxCallBack
+                                                   linkTo
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sLinkID1                1D64 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9A38 - 9A6D (0x36 bytes), align: 1
+  Segment part 16.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           main                    9A38            Segment part 26 (?cstart)
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A330 - A335 (0x6 bytes), align: 1
+  Segment part 15.            Intra module refs:   main
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           gpio_init               A330 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9426 - 948B (0x66 bytes), align: 1
+  Segment part 14.            Intra module refs:   main
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           linkTo                  9426 
+               calls direct
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 9B0C - 9B3F (0x34 bytes), align: 1
+  Segment part 20.            Intra module refs:   main
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           RxCallBack              9B0C 
+               calls direct
+    -------------------------------------------------------------------------
+ISR_CODE
+  Relative segment, address: 8132 - 8133 (0x2 bytes), align: 1
+  Segment part 21.            Intra module refs:   WDT_ISR::??INTVEC 118
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           WDT_ISR                 8132 
+               interrupt function
+    -------------------------------------------------------------------------
+INTVEC
+  Common segment, address: FF80 - FFF7 (0x78 bytes), align: 1
+  Segment part 3. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           WDT_ISR::??INTVEC 118   FFF6 
+
+    *************************************************************************
+
+  FILE NAME : C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\430\lib\dlib\dl430xlsfn.r43
+  LIBRARY MODULE, NAME : ?__dbg_break
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A37E - A37F (0x2 bytes), align: 1
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __DebugBreak            A37E            __exit (?__exit)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?__exit
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A1E4 - A1F7 (0x14 bytes), align: 1
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __exit                  A1E4            Segment part 6 (?_exit)
+                                                   _exit (?_exit)
+               calls direct
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?_exit
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A364, align: 1
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _exit                   A364            exit (?exit)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A364 - A367 (0x4 bytes), align: 1
+  Segment part 6.             Intra module refs:   _exit
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?cstart
+
+  SEGMENTS IN THE MODULE
+  ======================
+CSTACK
+  Relative segment, address: 2BAE, align: 1
+  Segment part 1.
+    -------------------------------------------------------------------------
+DATA16_Z
+  Relative segment, address: 1C50, align: 1
+  Segment part 2.
+    -------------------------------------------------------------------------
+DATA16_I
+  Relative segment, address: 1C00, align: 1
+  Segment part 3.
+    -------------------------------------------------------------------------
+DATA16_ID
+  Relative segment, address: 806C, align: 1
+  Segment part 4.
+    -------------------------------------------------------------------------
+CODE_I
+  Relative segment, address: 1D66, align: 1
+  Segment part 5.
+    -------------------------------------------------------------------------
+CODE_ID
+  Relative segment, address: 8134, align: 1
+  Segment part 6.
+    -------------------------------------------------------------------------
+DATA20_Z
+  Relative segment, address: 1D66, align: 1
+  Segment part 7.
+    -------------------------------------------------------------------------
+DATA20_I
+  Relative segment, address: 1D66, align: 1
+  Segment part 8.
+    -------------------------------------------------------------------------
+DATA20_ID
+  Relative segment, address: 809A, align: 1
+  Segment part 9.
+    -------------------------------------------------------------------------
+DATA20_C
+  Relative segment, address: 809A, align: 1
+  Segment part 10.
+    -------------------------------------------------------------------------
+DATA20_N
+  Relative segment, address: 1D66, align: 1
+  Segment part 12.
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: 809A - 809D (0x4 bytes), align: 1
+  Segment part 15.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __program_start         809A            ?reset_vector (?reset_vector)
+                                                   Absolute parts (?ABS_ENTRY_MOD)
+           ?cstart_begin           809A 
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: 809E - 80A5 (0x8 bytes), align: 1
+  Segment part 17.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?cstart_call_low_level_init
+                                   809E            __low_level_init (bsp)
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: 80A6 - 80B1 (0xc bytes), align: 1
+  Segment part 19.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?cstart_init_zero       80A6            crcFail (mrfi)
+                                                   crcPass (mrfi)
+                                                   mrfiIncomingPacket (mrfi)
+                                                   mrfiRadioState (mrfi)
+                                                   mrfiRndSeed (mrfi)
+                                                   mrfiRxFilterEnabled (mrfi)
+                                                   noFrame (mrfi)
+                                                   radio_cmd (Smoke)
+                                                   rx_isr_context (mrfi)
+                                                   sAPAddress (nwk_globals)
+                                                   sBackoffHelper (mrfi)
+                                                   sInFrameQ (nwk_QMgmt)
+                                                   sInit_done (nwk_api)
+                                                   sJoinToken (nwk_join)
+                                                   sKillSem (mrfi)
+                                                   sLinkID1 (Smoke)
+                                                   sLinkToken (nwk_link)
+                                                   sListenActive (nwk_link)
+                                                   sMyAddr (nwk_frame)
+                                                   sMyRAMAddress (nwk_globals)
+                                                   sMyRxType (nwk_frame)
+                                                   sMyTxType (nwk_frame)
+                                                   sNumLinkers (nwk_link)
+                                                   sOutFrameQ (nwk_QMgmt)
+                                                   sRAMAddressIsSet (nwk_globals)
+                                                   sReplyDelayContext (mrfi)
+                                                   sReplyDelayScalar (mrfi)
+                                                   sServiceLinkID (nwk_link)
+                                                   sTRACTID (nwk_frame)
+                                                   sTid (nwk_join)
+                                                   sTid (nwk_link)
+                                                   sTid (nwk_mgmt)
+                                                   sTid (nwk_ping)
+                                                   spCallback (nwk_frame)
+                                                   spCallback (nwk_join)
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: 80B2 - 80C1 (0x10 bytes), align: 1
+  Segment part 20.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?cstart_init_copy       80B2            method (mrfi)
+                                                   mrfiRxFilterAddr (mrfi)
+                                                   sPersistInfo (nwk)
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: 80C2 - 80C9 (0x8 bytes), align: 1
+  Segment part 26.            Intra module refs:   ?cstart_call_low_level_init
+                                                   Segment part 15
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?cstart_call_main       80C2 
+           ?cstart_end             80CA 
+    -------------------------------------------------------------------------
+CODE_ID
+  Relative segment, address: 8134, align: 1
+  Segment part 27.            Intra module refs:   Segment part 5
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?reset_vector
+
+  SEGMENTS IN THE MODULE
+  ======================
+RESET
+  Relative segment, address: FFFE - FFFF (0x2 bytes), align: 1
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?reset_vector           FFFE            Segment part 15 (?cstart)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?exit
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A368 - A36B (0x4 bytes), align: 1
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           exit                    A368            Segment part 26 (?cstart)
+               calls direct
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?DivMod816u
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A136 - A139 (0x4 bytes), align: 1
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?DivMod8u               A136            Mrfi_CalculateRssi (mrfi)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A13A - A151 (0x18 bytes), align: 1
+  Segment part 1.             Intra module refs:   ?DivMod8u
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?DivMod16u              A13A            ?DivMod16s (?DivMod816s)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?DivMod816s
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: 9C0A - 9C39 (0x30 bytes), align: 1
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?DivMod16s              9C0A            Mrfi_CalculateRssi (mrfi)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?DivMod32u
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: 9C6A - 9C99 (0x30 bytes), align: 1
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?DivMod32u              9C6A            MRFI_Init (mrfi)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?ShiftRight32s
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: 948C - 94CF (0x44 bytes), align: 1
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?ShiftRight32s          948C            MRFI_Init (mrfi)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 94D0 - 94D3 (0x4 bytes), align: 1
+  Segment part 1.             Intra module refs:   ?ShiftRight32s
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?ShiftRight32s_7        94D0 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 94D4 - 94D7 (0x4 bytes), align: 1
+  Segment part 2.             Intra module refs:   ?ShiftRight32s_7
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?ShiftRight32s_6        94D4 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 94D8 - 94DB (0x4 bytes), align: 1
+  Segment part 3.             Intra module refs:   ?ShiftRight32s_6
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?ShiftRight32s_5        94D8 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 94DC - 94DF (0x4 bytes), align: 1
+  Segment part 4.             Intra module refs:   ?ShiftRight32s_5
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?ShiftRight32s_4        94DC 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 94E0 - 94E3 (0x4 bytes), align: 1
+  Segment part 5.             Intra module refs:   ?ShiftRight32s_4
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?ShiftRight32s_3        94E0 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: 94E4 - 94ED (0xa bytes), align: 1
+  Segment part 6.             Intra module refs:   ?ShiftRight32s_3
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?ShiftRight32s_2        94E4 
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?memcmp
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A0FA - A117 (0x1e bytes), align: 1
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           memcmp                  A0FA            dispatchFrame (nwk_frame)
+                                                   nwk_QfindOldest (nwk_QMgmt)
+                                                   nwk_allocateLocalRxPort (nwk)
+                                                   nwk_findPeer (nwk)
+                                                   nwk_isConnectionValid (nwk)
+                                                   nwk_isLinkDuplicate (nwk)
+                                                   nwk_isValidReply (nwk)
+                                                   nwk_processMgmt (nwk_mgmt)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?memcpy
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A252 - A263 (0x12 bytes), align: 1
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           memcpy                  A252            SMPL_Ioctl (nwk_api)
+                                                   SMPL_SendOpt (nwk_api)
+                                                   __data16_memcpy (?memzero)
+                                                   nwk_buildFrame (nwk_frame)
+                                                   nwk_deviceAddress (nwk_ioctl)
+                                                   nwk_globalsInit (nwk_globals)
+                                                   nwk_join (nwk_join)
+                                                   nwk_link (nwk_link)
+                                                   nwk_nwkInit (nwk)
+                                                   nwk_radioControl (nwk_ioctl)
+                                                   nwk_rawSend (nwk_ioctl)
+                                                   nwk_retrieveFrame (nwk_frame)
+                                                   nwk_sendAckReply (nwk_frame)
+                                                   nwk_setAPAddress (nwk_globals)
+                                                   nwk_setMyAddress (nwk_globals)
+                                                   smpl_send_link_reply (nwk_link)
+                                                   smpl_send_ping_reply (nwk_ping)
+                                                   smpl_send_unlink_reply (nwk_link)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?memmove
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: 9AA4 - 9AD7 (0x34 bytes), align: 1
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           memmove                 9AA4            nwk_getNumObjectFromMsg (nwk)
+                                                   nwk_putNumObjectIntoMsg (nwk)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?CopyMemoryBytes
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A274 - A283 (0x10 bytes), align: 1
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?CopyMemoryBytes        A274            MRFI_Receive (mrfi)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?memset
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A20A - A21B (0x12 bytes), align: 1
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           memset                  A20A            MRFI_Init (mrfi)
+                                                   Mrfi_SyncPinRxIsr (mrfi)
+                                                   nwk_QInit (nwk_QMgmt)
+                                                   nwk_allocateLocalRxPort (nwk)
+                                                   nwk_globalsInit (nwk_globals)
+                                                   nwk_linkInit (nwk_link)
+                                                   nwk_nwkInit (nwk)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?memzero
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A264 - A273 (0x10 bytes), align: 1
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __data16_memzero        A264            ?cstart_init_zero (?cstart)
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: A360 - A363 (0x4 bytes), align: 1
+  Segment part 3.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __data16_memcpy         A360            ?cstart_init_copy (?cstart)
+               calls direct
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?IndCallR11
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A358 - A35B (0x4 bytes), align: 1
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?IndCallR11             A358            Mrfi_DelayUsecLong (mrfi)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?IndCallR15
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: A374 - A377 (0x4 bytes), align: 1
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?IndCallR15             A374            dispatchFrame (nwk_frame)
+
+
+
+
+                ****************************************
+                *                                      *
+                *      SEGMENTS IN ADDRESS ORDER       *
+                *                                      *
+                ****************************************
+
+
+SEGMENT              SPACE    START ADDRESS   END ADDRESS     SIZE  TYPE  ALIGN
+=======              =====    =============   ===========     ====  ====  =====
+DATA16_AN                              0100 - 0103               4   rel    0
+                                       0120 - 0121               2 
+                                       0124 - 0127               4 
+                                       012C - 012D               2 
+                                       0140 - 0141               2 
+                                       0144 - 0145               2 
+                                       015C - 015D               2 
+                                       0160 - 0169               A 
+                                       016E - 016F               2 
+                                       01C0 - 01C1               2 
+                                       01CC - 01CF               4 
+                                       0202 - 0207               6 
+                                       020A - 020B               2 
+                                       0222 - 0225               4 
+                                       0340 - 0343               4 
+                                       0350 - 0353               4 
+                                       05C0 - 05C1               2 
+                                       05C6 - 05C8               3 
+                                       05CC - 05CC               1 
+                                       05CE - 05CE               1 
+                                       05DC - 05DD               2 
+                                       0F02 - 0F03               2 
+                                       0F0C - 0F13               8 
+                                       0F20 - 0F23               4 
+                                       0F30 - 0F39               A 
+DATA16_I                               1C00 - 1C2D              2E   rel    1
+DATA16_Z                               1C2E - 1D64             137   rel    1
+CODE_I                                    1D66                       rel    1
+DATA20_I                                  1D66                       rel    1
+DATA20_N                                  1D66                       rel    1
+DATA20_Z                                  1D66                       rel    1
+CSTACK                                 2BAE - 2BFD              50   rel    1
+DATA16_C                               8000 - 806B              6C   rel    1
+DATA16_ID                              806C - 8099              2E   rel    1
+DATA20_ID                                 809A                       rel    1
+DATA20_C                                  809A                       rel    1
+CSTART                                 809A - 80C9              30   rel    1
+ISR_CODE                               80CA - 8133              6A   rel    1
+CODE_ID                                   8134                       rel    1
+<CODE> 1                               8134 - A381            224E   rel    1
+INTVEC                                 FF80 - FFF7              78   com    1
+RESET                                  FFFE - FFFF               2   rel    1
+
+                ****************************************
+                *                                      *
+                *        END OF CROSS REFERENCE        *
+                *                                      *
+                ****************************************
+
+ 9 058 bytes of CODE  memory
+   437 bytes of DATA  memory (+ 89 absolute )
+   154 bytes of CONST memory
+
+Errors: none
+Warnings: none
+
